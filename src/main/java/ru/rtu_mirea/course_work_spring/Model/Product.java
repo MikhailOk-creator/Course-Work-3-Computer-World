@@ -36,6 +36,10 @@ public class Product {
     /** The description of product **/
     private String description;
 
+    /** URL where the product image is stored **/
+    @Column(name = "image_url")
+    private String imageUrl;
+
     @ManyToOne
     /** The order to which the product is attached **/
     private Order order;
