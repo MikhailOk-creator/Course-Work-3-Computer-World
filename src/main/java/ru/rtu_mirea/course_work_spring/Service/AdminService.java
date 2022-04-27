@@ -149,16 +149,18 @@ public class AdminService {
     }
 
     /**
-     * Метод добавления нового рабочего в базу данных.
-     * @param user - пользователь, которого необходимо добавить в БД.
-     * @param errors - - в случае ошибки создания пользователя на вход приходят ошибки, которые возвращаются пользователю в виде предупреждений.
-     * @param redirectAttributes - атрибуты, которые заполняются и в дальнейшем выдаются пользователю на странице (currentName, currentPassword,
-     *                           currentEmail, currentRealName, currentSurname, currentPhone, currentAddress).
-     * @return Два исхода: если пришедший пользователь имя поля с ошибками, то в redirectAttributes записываются ошибки и пользователю
-     * возвращается страница, уведомляющая его об ошибках; в противном случае - новые работник добавляется в БД и возвращается главная страница.
+     * Method of adding a new worker to the database.
+     * @param user - user to be added to the database.
+     * @param errors - - in case of user creation error the errors are returned to the user in the form of warnings.
+     * @param redirectAttributes - attributes that are filled in and later given to the user on the page (currentName, currentPassword,
+     *                          currentEmail, currentRealName, currentSurname, currentPhone, currentAddress).
+     * @return Two outcomes: if the incoming username the field with errors, then errors are written to redirectAttributes and the user
+     * page is returned, notifying him about the errors; otherwise - the new worker is added to the database and the main page is returned.
      * @see User
      * @see BCryptPasswordEncoder
-     */
+     *
+     * Translated with www.DeepL.com/Translator (free version)
+     **/
     public String addNewWorker(User user, Errors errors, RedirectAttributes redirectAttributes) {
         if(errors.hasErrors()){
             redirectAttributes.addFlashAttribute("currentName", user.getLogin());
