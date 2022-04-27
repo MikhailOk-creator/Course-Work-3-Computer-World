@@ -1,6 +1,6 @@
 package ru.rtu_mirea.course_work_spring.Service;
 
-import org.apache.tomcat.util.http.fileupload.FileUtils;
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -20,6 +20,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 @Service
@@ -180,5 +181,120 @@ public class AdminService {
             userRepo.save(user);
         }
         return "redirect:/admin";
+    }
+
+    /**
+     * Method that returns the page for changing the product image.
+     * @param id - unique identifier of the product whose image should be changed.
+     * @param model - model - MVC class in which attributes are added for displaying on the page (product - product found in the database by id).
+     * @param map - parameters that come from the frontend.
+     * @return Page to change product image.
+     * @see Product
+     */
+    public String changeImageForm(Long id, Model model, Map<String, ?> map){
+        if(map != null) {
+            for (Map.Entry<String, ?> entry : map.entrySet()) {
+                model.addAttribute(entry.getKey(), entry.getValue());
+            }
+        }
+        Product productBD = repository.findById(id).get();
+        model.addAttribute("product", productBD);
+        return "change_image";
+    }
+
+    /**
+     * Method for changing the product's image directly.
+     * @param id - unique identifier of the product whose image should be changed.
+     * @param img - new product image.
+     * @param attributes - attributes that are filled in and later given to the user on the page (imgErr).
+     * @return Two possible outcomes: if the new image has no name, an attribute is added to attributes,
+     * which notifies the user of the error and the product change page is returned; otherwise, the product is updated,
+     * the new file replaces the old file and the main admin page is returned.
+     * @see Product
+     **/
+    public String changeImage(Long id, MultipartFile img, RedirectAttributes attributes) {
+        boolean flagErrors = false;
+        Product changeProduct = repository.findById(id).get();
+        String pastUrl = uploadPath + "/" + changeProduct.getImageUrl();
+
+        if(!img.getOriginalFilename().equals("")) {
+            String uuid = UUID.randomUUID().toString();
+            String nameOfFile = uuid + img.getOriginalFilename();
+            String filePath = uploadPath + "/" + nameOfFile;
+
+            changeProduct.setImageUrl(nameOfFile);
+            try {
+                img.transferTo(new File(filePath));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            repository.save(changeProduct);
+            FileUtils.deleteQuietly(new File(pastUrl));
+        } else {
+            flagErrors = true;
+            attributes.addFlashAttribute("imgErr", "Файл должен иметь название и не должен быть пустым");
+        }
+        if (flagErrors)
+            return "redirect:/admin/changeImage/" + id;
+
+        return "redirect:/admin";
+    }
+
+    /**
+     * A method that fills the change page of a specific product.
+     * @param id - unique product identifier.
+     * @param model - MVC class in which attributes are added to be displayed on the page
+     * (currentProduct - product which is passed by id, types - possible product types).
+     * @param attributes - attributes from the front end.
+     * @return The page that contains information on the product that is changing.
+     * @see Product
+     * @see ProductType
+     **/
+    public String changeProductForm(Long id, Model model, Map<String, ?> attributes) {
+        if(attributes != null) {
+            for (Map.Entry<String, ?> entry : attributes.entrySet()) {
+                model.addAttribute(entry.getKey(), entry.getValue());
+            }
+        }
+
+        model.addAttribute("currentProduct", repository.findById(id).get());
+        model.addAttribute("types", ProductType.values());
+        return "change_product";
+    }
+
+    public String changeProduct(Product product, RedirectAttributes redirectAttributes, Long id){
+        boolean flagOfErrors = false;
+
+        Product dataBaseProduct = repository.findById(id).get();
+
+        if(product.getName().equals("")){
+            flagOfErrors = true;
+            redirectAttributes.addFlashAttribute("titleErr", "Обязательное поле для заполнения");
+        }
+        if(product.getDescription().equals("")){
+            flagOfErrors = true;
+            redirectAttributes.addFlashAttribute("descriptionErr", "Обязательное поле для заполнения");
+        }
+        if(product.getType().isEmpty()){
+            flagOfErrors = true;
+            redirectAttributes.addFlashAttribute("selectingTypeErr", "Необходимо выбрать тип товара");
+        }
+        if(product.getNumber() == null){
+            flagOfErrors = true;
+            redirectAttributes.addFlashAttribute("numberErr", "Введите количество товара");
+        }
+        if(product.getPrice() == null){
+            flagOfErrors = true;
+            redirectAttributes.addFlashAttribute("priceErr", "Введите стоимость товара");
+        }
+
+        if (!flagOfErrors){
+            dataBaseProduct.setForChange(product.getType(), product.getName(), product.getDescription(), product.getNumber(), product.getPrice());
+            repository.save(dataBaseProduct);
+            return "redirect:/admin";
+        }
+
+        return "redirect:/admin/changeProduct/" + id;
     }
 }

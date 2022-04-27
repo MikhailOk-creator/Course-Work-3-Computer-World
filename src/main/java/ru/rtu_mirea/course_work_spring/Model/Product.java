@@ -47,7 +47,7 @@ public class Product {
     /** Class constructors **/
     public Product() {
     }
-    public Product(Set<ProductType> type, String name, Long number, Long price, String description) {
+    public void setForChange(Set<ProductType> type, String title, String description, Long number, Long price) {
         this.type = type;
         this.name = name;
         this.number = number;
