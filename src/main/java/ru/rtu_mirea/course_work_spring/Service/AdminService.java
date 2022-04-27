@@ -158,8 +158,6 @@ public class AdminService {
      * page is returned, notifying him about the errors; otherwise - the new worker is added to the database and the main page is returned.
      * @see User
      * @see BCryptPasswordEncoder
-     *
-     * Translated with www.DeepL.com/Translator (free version)
      **/
     public String addNewWorker(User user, Errors errors, RedirectAttributes redirectAttributes) {
         if(errors.hasErrors()){
