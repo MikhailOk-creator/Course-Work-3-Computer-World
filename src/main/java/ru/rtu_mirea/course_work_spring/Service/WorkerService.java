@@ -19,6 +19,13 @@ public class WorkerService {
         this.mailService = mailService;
     }
 
+    /**
+     * A method that returns the main page with orders and statuses.
+     * @param model - MVC class in which attributes are added for display on the page (orders, statuses).
+     * @return page with orders and statuses.
+     * @see Order
+     * @see OrderStatus
+     **/
     public String getPage(Model model) {
         List<Order> orderList = orderRepo.findAll();
         model.addAttribute("orders", orderList);
@@ -28,6 +35,14 @@ public class WorkerService {
         return "workerFrom";
     }
 
+    /**
+     * A method that changes order status and notifies the user about it.
+     * @param order - order in which the new status is stored.
+     * @param id - unique identifier of the order whose status should be changed.
+     * @return Home page with the changed order.
+     * @see Order
+     * @see #mailService
+     **/
     public String changeStatus(Order order, Long id) {
         Order orderBD = orderRepo.findById(id).get();
         orderBD.setStatus(order.getStatus());
