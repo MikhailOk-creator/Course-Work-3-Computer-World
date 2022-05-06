@@ -1,6 +1,7 @@
 package ru.rtu_mirea.course_work_spring.Model;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -11,6 +12,7 @@ import java.util.Set;
 @Table(name = "orders")
 @Getter
 @Setter
+@NoArgsConstructor
 public class Order {
     /** ID order in the Database **/
     @Id

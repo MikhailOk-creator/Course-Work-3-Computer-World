@@ -1,7 +1,6 @@
 package ru.rtu_mirea.course_work_spring.Model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -11,6 +10,9 @@ import java.util.Set;
 @Table(name = "users")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class User {
     /** ID order in the Database **/
     @Id

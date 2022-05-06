@@ -1,6 +1,7 @@
 package ru.rtu_mirea.course_work_spring.Service;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.validation.FieldError;
@@ -13,6 +14,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 
+@Service
 public class OrderService {
     private final CartService cartService;
     private final OrderRepo orderRepo;

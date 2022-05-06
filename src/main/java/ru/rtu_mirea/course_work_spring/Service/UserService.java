@@ -2,6 +2,7 @@ package ru.rtu_mirea.course_work_spring.Service;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.validation.FieldError;
@@ -14,6 +15,7 @@ import ru.rtu_mirea.course_work_spring.Repos.UserRepo;
 import java.util.Collections;
 import java.util.List;
 
+@Service
 public class UserService {
     /**
      * The repository that contains all of system's user records.
@@ -69,8 +71,10 @@ public class UserService {
     }
 
     /**
-     * A method that saves the user to the database or updates data on the user, if he is already contained in the database.
-     * @param user - user whose fields must be saved or updated.
+     * A method that saves the
+     * user to the database or updates data on the user, if he is already contained in the database.
+     * @param user - user whos
+     *            fields must be saved or updated.
      * @see User
      * {@link #repository}
      **/
