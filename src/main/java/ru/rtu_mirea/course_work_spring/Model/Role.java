@@ -3,7 +3,7 @@ package ru.rtu_mirea.course_work_spring.Model;
 import org.springframework.security.core.GrantedAuthority;
 
 public enum Role implements GrantedAuthority {
-    ADMIN, USER, WORKER;
+    ADMIN, USER, WORKER, PR5;
     @Override
     public String getAuthority() {
         return name();

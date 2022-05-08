@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+    .titleSpan{
+             margin : 2px;
+             font-size : 18px;
+             font-weight : bold;
+        }
+    .btn{
+            box-sizing: border-box;
+            padding: 0 20px;
+            margin: 0 15px 15px 0;
+            outline: none;
+            border: none;
+            border-radius: 4px;
+            height: 32px;
+            line-height: 32px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            color: #fff;
+            background-color: #3775dd;
+            box-shadow: 0 2px #21487f;
+            cursor: pointer;
+            user-select: none;
+            appearance: none;
+            touch-action: manipulation;
+            vertical-align: top;
+        }
+        .btn:hover {
+            background-color: #002fed;
+        }
+        .btn:active {
+            background-color: #2f599e !important;
+        }
+        .btn:focus-visible {
+            box-shadow: 0 0 0 3px lightskyblue;
+        }
+        .btn:disabled {
+            background-color: #6c87b5;
+            pointer-events: none;
+        }
+	    table {
+	        width: 100%;
+	        border: 2px double black;
+	        text-align: center;
+        }
+        table th {
+	        font-weight: bold;
+	        padding: 2px;
+	        background: #efefef;
+	        border: 2px double black;
+        }
+        table td {
+	        border: 2px double black;
+	        padding: 2px;
+        }
+        body {
+	        background: linear-gradient(-45deg, #F5F5F5, #DCDCDC, #E0FFFF);
+	        background-size: 400% 400%;
+	        animation: gradient 15s ease infinite;
+
+        }
+
+        @keyframes gradient {
+	        0% {
+		        background-position: 0% 50%;
+	        }
+	        50% {
+		        background-position: 100% 50%;
+	        }
+	        100% {
+		        background-position: 0% 50%;
+	        }
+	    }
+    </style>
+</head>
+<body>
+<a class="btn" href="/">Вернуться на главную страницу</a>
+<br>
+    <span class="titleSpan">Список заказов</span>
+    <br>
+    <table>
+        <thead>
+        <tr>
+            <th> Номер заказа</th>
+            <th> Имя </th>
+            <th> Фамилия </th>
+            <th> Адресс </th>
+            <th> E-mail </th>
+            <th> Номер телефона </th>
+            <th> Статус заказа </th>
+            <th> Отмена заказа </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="order : ${orders}">
+                <td><span th:text="${order.id}"> Номер заказа </span></td>
+                <td><span th:text="${order.name}"> Имя </span></td>
+                <td><span th:text="${order.surname}"> Фамилия </span></td>
+                <td><span th:text="${order.address}"> Адресс </span></td>
+                <td><span th:text="${order.email}"> E-mail </span></td>
+                <td><span th:text="${order.phone}"> Номер телефона </span></td>
+                <td><span th:text="${order.status}"> Статус </span></td>
+                <td>
+                    <form th:action="@{/order/delete/{id} (id = ${order.id})}" method="post">
+                        <input class="btn" type="submit" value="Удалить заказ">
+                    </form>
+                </td>
+        </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
