@@ -1,32 +1,34 @@
 package ru.rtu_mirea.course_work_spring.Model;
 
 import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
 @Entity
-@Table(name = "users")
+@Table(name = "usr")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class User {
+public class User implements UserDetails {
     /** ID order in the Database **/
     @Id
-    @SequenceGenerator(name = "users_seq", sequenceName = "users_sequence", allocationSize = 1)
-    @GeneratedValue(generator = "users_seq", strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     /** Basic user data for login/security **/
     private String email;
-    private String login;
+    private String name;
     private String password;
 
     /** Basic user data for orders **/
-    private String name;
+    private String realName;
     private String surname;
     private String address;
     private String phone;
@@ -44,4 +46,34 @@ public class User {
     /** All user orders made in the system **/
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private List<Order> orders;
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return roles;
+    }
+
+    @Override
+    public String getUsername() {
+        return name;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return active;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return active;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return active;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return active;
+    }
 }

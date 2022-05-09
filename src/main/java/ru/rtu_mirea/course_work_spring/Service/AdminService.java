@@ -162,10 +162,10 @@ public class AdminService {
      **/
     public String addNewWorker(User user, Errors errors, RedirectAttributes redirectAttributes) {
         if(errors.hasErrors()){
-            redirectAttributes.addFlashAttribute("currentName", user.getLogin());
+            redirectAttributes.addFlashAttribute("currentName", user.getName());
             redirectAttributes.addFlashAttribute("currentPassword", user.getPassword());
             redirectAttributes.addFlashAttribute("currentEmail", user.getEmail());
-            redirectAttributes.addFlashAttribute("currentRealName", user.getName());
+            redirectAttributes.addFlashAttribute("currentRealName", user.getRealName());
             redirectAttributes.addFlashAttribute("currentSurname", user.getSurname());
             redirectAttributes.addFlashAttribute("currentPhone", user.getPhone());
             redirectAttributes.addFlashAttribute("currentAddress", user.getAddress());

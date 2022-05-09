@@ -4,6 +4,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import ru.rtu_mirea.course_work_spring.Model.User;
 import ru.rtu_mirea.course_work_spring.Repos.UserRepo;
 
 /** A class that contains methods for Spring Security to work correctly **/
@@ -23,6 +24,6 @@ public class UserDetService implements UserDetailsService {
      **/
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return (UserDetails) repo.findUserByName(username);
+        return repo.findUserByName(username);
     }
 }

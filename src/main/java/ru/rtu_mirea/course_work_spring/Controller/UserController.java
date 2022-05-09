@@ -37,9 +37,9 @@ public class UserController {
         }
 
         model.addAttribute("phone", currentUser.getPhone() == null ? "" : currentUser.getPhone());
-        model.addAttribute("Login", currentUser.getLogin() == null ? "" : currentUser.getLogin());
+        model.addAttribute("Login", currentUser.getName() == null ? "" : currentUser.getName());
         model.addAttribute("address", currentUser.getAddress() == null ? "" : currentUser.getAddress());
-        model.addAttribute("Name", currentUser.getName() == null ? "" : currentUser.getName());
+        model.addAttribute("Name", currentUser.getRealName() == null ? "" : currentUser.getRealName());
         model.addAttribute("surname", currentUser.getSurname() == null ? "" : currentUser.getSurname());
 
         return "userAccountDetails";
