@@ -1,108 +1,44 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
-      xmlns:form="http://www.w3.org/1999/html">
+<html lang="en">
+
 <head>
-    <title>Registration</title>
-    <meta charset="UTF-8">
-    <style type="text/css">
-        .titleSpan{
-             margin : 2px;
-             font-size : 18px;
-             font-weight : bold;
-        }
-        .notTitle{
-            margin : 2px;
-            font-size : 15px;
-        }
-        .prodCart{
-            border: 2px double;
-            padding: 7px;
-            background: #D3CCE3;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-
-        .btn{
-            box-sizing: border-box;
-            padding: 0 20px;
-            margin: 0 15px 15px 0;
-            outline: none;
-            border: none;
-            border-radius: 4px;
-            height: 32px;
-            line-height: 32px;
-            font-size: 14px;
-            font-weight: 500;
-            text-decoration: none;
-            color: #fff;
-            background-color: #3775dd;
-            box-shadow: 0 2px #21487f;
-            cursor: pointer;
-            user-select: none;
-            appearance: none;
-            touch-action: manipulation;
-            vertical-align: top;
-        }
-        .btn:hover {
-            background-color: #002fed;
-        }
-        .btn:active {
-            background-color: #2f599e !important;
-        }
-        .btn:focus-visible {
-            box-shadow: 0 0 0 3px lightskyblue;
-        }
-        .btn:disabled {
-            background-color: #6c87b5;
-            pointer-events: none;
-        }
-        body {
-	        background: linear-gradient(-45deg, #F5F5F5, #DCDCDC, #E0FFFF);
-	        background-size: 400% 400%;
-	        animation: gradient 15s ease infinite;
-
-        }
-
-        @keyframes gradient {
-	        0% {
-		        background-position: 0% 50%;
-	        }
-	        50% {
-		        background-position: 100% 50%;
-	        }
-	        100% {
-		        background-position: 0% 50%;
-	        }
-	    }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="TheSecondVersion_PastCourseWork/Codes/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="TheSecondVersion_PastCourseWork/Codes/assets/css/Login-Form-Basic.css">
+    <link rel="stylesheet" href="TheSecondVersion_PastCourseWork/Codes/assets/css/styles.css">
 </head>
+
 <body>
-<a class="btn" href="/">Вернуться на главную страницу</a>
-<br>
-<span style="color: red" th:name="errorAcc"></span>
-<form action="/registrationAcc" method="get">
-    <div>
-        <label class="notTitle"> Login: <input type="text" name="name" th:value="${currenLogin}"/> </label>
-        <span style="color: red" th:text="${login}"></span>
-    </div>
-    <div>
-        <label class="notTitle"> E-mail: <input type="text" name="email" th:value="${currentEmail}"/> </label>
-        <span style="color: red" th:text="${email}"></span>
-    </div>
-    <div>
-        <label class="notTitle"> Password: <input type="password" name="password" th:value="${currentPassword}"/> </label>
-        <span style="color: red" th:text="${password}"></span>
-    </div>
-    <div>
-        <label class="notTitle">Admin: <input type="checkbox" name="role" value="ADMIN"/></label>
-    </div>
-    <div>
-        <label class="notTitle">User: <input type="checkbox" name="role" value="USER"/></label>
-    </div>
-    <div>
-        <label class="notTitle">PR5: <input type="checkbox" name="role" value="PR5"/></label>
-    </div>
-    <div><input class="btn" type="submit" value="Sign In"/></div>
-</form>
+    <section class="position-relative py-4 py-xl-5">
+        <h2 class="text-center mb-4">Enter your data</h2>
+        <div class="container position-relative">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+                    <div class="card mb-5">
+                        <div class="card-body p-sm-5">
+                            <span style="color: red" th:name="errorAcc"></span>
+                            <form action="/registrationAcc" method="get">
+                                <div class="mb-3"><input class="form-control" type="text" id="name-2" name="name" placeholder="Name" th:value="${currenLogin}"/>
+                                    <span style="color: red" th:text="${login}"></span>
+                                </div>
+                                <div class="mb-3"><input class="form-control" type="email" id="email-2" name="email" placeholder="Email" th:value="${currentEmail}/">
+                                    <span style="color: red" th:text="${email}"></span>
+                                </div>
+                                <div class="mb-3"><input class="form-control" type="email" id="password-2" name="password" placeholder="Password"th:value="${currentPassword}/">
+                                    <span style="color: red" th:text="${password}"></span>
+                                </div>
+                                <div class="mb-3"></div>
+                                <div><button class="btn btn-primary d-block w-100" type="submit">Sign In</button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="TheSecondVersion_PastCourseWork/Codes/assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
+
 </html>

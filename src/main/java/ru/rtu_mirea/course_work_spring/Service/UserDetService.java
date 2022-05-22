@@ -5,7 +5,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import ru.rtu_mirea.course_work_spring.Model.User;
-import ru.rtu_mirea.course_work_spring.Repos.UserRepo;
+import ru.rtu_mirea.course_work_spring.Repository.UserRepo;
 
 /** A class that contains methods for Spring Security to work correctly **/
 @Service

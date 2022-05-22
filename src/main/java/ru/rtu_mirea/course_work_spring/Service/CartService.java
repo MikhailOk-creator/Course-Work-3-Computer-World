@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import ru.rtu_mirea.course_work_spring.DTO.CartProduct;
 import ru.rtu_mirea.course_work_spring.Model.Product;
-import ru.rtu_mirea.course_work_spring.Repos.ProductRepo;
+import ru.rtu_mirea.course_work_spring.Repository.ProductRepo;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;

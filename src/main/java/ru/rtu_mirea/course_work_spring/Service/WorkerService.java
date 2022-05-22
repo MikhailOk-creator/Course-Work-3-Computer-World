@@ -2,10 +2,9 @@ package ru.rtu_mirea.course_work_spring.Service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
-import ru.rtu_mirea.course_work_spring.Model.MailService;
 import ru.rtu_mirea.course_work_spring.Model.Order;
 import ru.rtu_mirea.course_work_spring.Model.OrderStatus;
-import ru.rtu_mirea.course_work_spring.Repos.OrderRepo;
+import ru.rtu_mirea.course_work_spring.Repository.OrderRepo;
 
 import java.util.List;
 

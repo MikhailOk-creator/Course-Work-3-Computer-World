@@ -7,8 +7,8 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.FieldError;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import ru.rtu_mirea.course_work_spring.Model.*;
-import ru.rtu_mirea.course_work_spring.Repos.OrderRepo;
-import ru.rtu_mirea.course_work_spring.Repos.ProductRepo;
+import ru.rtu_mirea.course_work_spring.Repository.OrderRepo;
+import ru.rtu_mirea.course_work_spring.Repository.ProductRepo;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;

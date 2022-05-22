@@ -1,4 +1,4 @@
-package ru.rtu_mirea.course_work_spring.Repos;
+package ru.rtu_mirea.course_work_spring.Repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

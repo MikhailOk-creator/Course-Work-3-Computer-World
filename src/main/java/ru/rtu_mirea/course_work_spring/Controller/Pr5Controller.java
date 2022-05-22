@@ -1,14 +1,12 @@
 package ru.rtu_mirea.course_work_spring.Controller;
 
 import lombok.RequiredArgsConstructor;
-import lombok.SneakyThrows;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 import ru.rtu_mirea.course_work_spring.Model.PdfFile;
-import ru.rtu_mirea.course_work_spring.Repos.PdfFileRepo;
+import ru.rtu_mirea.course_work_spring.Repository.PdfFileRepo;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

@@ -12,7 +12,7 @@ import ru.rtu_mirea.course_work_spring.Model.Product;
 import ru.rtu_mirea.course_work_spring.Model.ProductType;
 import ru.rtu_mirea.course_work_spring.Model.Role;
 import ru.rtu_mirea.course_work_spring.Model.User;
-import ru.rtu_mirea.course_work_spring.Repos.ProductRepo;
+import ru.rtu_mirea.course_work_spring.Repository.ProductRepo;
 import ru.rtu_mirea.course_work_spring.Service.CartService;
 import ru.rtu_mirea.course_work_spring.Service.UserService;
 

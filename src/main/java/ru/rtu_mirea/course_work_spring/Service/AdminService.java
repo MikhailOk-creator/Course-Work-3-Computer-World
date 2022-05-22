@@ -13,8 +13,8 @@ import ru.rtu_mirea.course_work_spring.Model.Product;
 import ru.rtu_mirea.course_work_spring.Model.ProductType;
 import ru.rtu_mirea.course_work_spring.Model.Role;
 import ru.rtu_mirea.course_work_spring.Model.User;
-import ru.rtu_mirea.course_work_spring.Repos.ProductRepo;
-import ru.rtu_mirea.course_work_spring.Repos.UserRepo;
+import ru.rtu_mirea.course_work_spring.Repository.ProductRepo;
+import ru.rtu_mirea.course_work_spring.Repository.UserRepo;
 
 import java.io.File;
 import java.io.IOException;

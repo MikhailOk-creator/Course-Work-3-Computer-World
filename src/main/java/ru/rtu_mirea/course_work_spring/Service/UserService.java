@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
 import ru.rtu_mirea.course_work_spring.Model.Role;
 import ru.rtu_mirea.course_work_spring.Model.User;
-import ru.rtu_mirea.course_work_spring.Repos.UserRepo;
+import ru.rtu_mirea.course_work_spring.Repository.UserRepo;
 
 import java.util.Collections;
 import java.util.List;

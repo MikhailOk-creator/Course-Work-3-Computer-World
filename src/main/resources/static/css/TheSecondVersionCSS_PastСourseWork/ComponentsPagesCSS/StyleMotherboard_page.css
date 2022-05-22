@@ -1,0 +1,234 @@
+*,*::before,*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html,body {
+    height: 100%;
+    font-family: Arial, "Helvetica Neue",Helvetica,sans-serif;
+}
+body {
+    background-image: url("../../../imgs/regnum_picture_15613153922135113_normal.jpg");
+    background-attachment: fixed;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+.header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    z-index: 2;
+}
+.header__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+.container {
+    max-width: 1400px;
+    margin: 0px auto;
+    padding: 0px 10px;
+}
+.header__list {
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+.header__list li {
+    list-style: none;
+    color: white;
+    margin: 0px 0px 0px 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-transform: none;
+}
+.header__logo {
+    flex: 0 0 60px;
+    position: relative;
+    z-index: 3;
+}
+.header__logo img{
+    display: block;
+    height: 75px;
+    width: 438px;
+}
+.header__link {
+    color: #ffff;
+    text-transform: uppercase;
+    font-style: 18px;
+    text-decoration: none;
+}
+.theoretical_introduction {
+    font-size: 16px;
+    line-height: 25px;
+    padding: 100px 0px 0px 0px;
+    background: #0078c9; /* Цвет фона */
+    padding: 20px; /* Поля вокруг текста */
+    color: #fff; /* Цвет текста */
+    border-radius: 20px;
+}
+.theoretical_introduction h1, h2, p {
+    color: #fff;
+}
+.name_of_page {
+    font-size: 16px;
+    line-height: 25px;
+    padding: 100px 0px 0px 0px;
+}
+.name_of_page h1 {
+    color: #fff;
+    background-color: blue;
+    width: 330px;
+    padding: 5px;
+    border-radius: 4px;
+}
+.real_motherboards h1 {
+    color: #fff;
+    background-color: blue;
+    width: 625px;
+    padding: 4px;
+    border-radius: 4px;
+}
+.theoretical_introduction > ul {
+    margin-left: 20px;
+}
+.real_motherboards li {
+ list-style-type: none; /* Убираем маркеры */
+}
+.Intel {
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10px;
+}
+.AMD {
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+}
+.specifications {
+    grid-area: my-spec;
+}
+.processor_img {
+    grid-area: my-img;
+}
+
+@media (min-width: 769px) {
+    .inf {
+        display: grid;
+        grid-template-areas: 
+            "my-img my-spec my-spec"
+    }
+}
+
+@media (max-width: 935px) {
+    .header__body {
+        height: 50px;
+    }
+    .header__logo img {
+        height: 46px;
+        width: 273px;
+    }
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 3;
+    }
+    .header__burger span {
+        position: absolute;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.2s ease 0s;
+    }
+    .header__burger:before, .header__burger:after {
+        content: '';
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.2s ease 0s;
+    }
+    .header__burger:before {
+        top: 0;
+    }
+    .header__burger:after {
+        bottom: 0;
+    }
+
+    .header__burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header__burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header__burger.active span {
+        transform: scale(0);
+    }
+
+    .header__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: #0078c9;;
+        transition: all 0.2s ease 0s;
+        padding: 70px 10px 20px 10px; 
+    }
+    .header__menu.active {
+        top: 0;
+    }
+    .header__list {
+        display: block;
+    }
+    .header__list li {
+        margin: 0px 0px 20px 0px;
+    }
+    .content_text {
+        padding: 70px 0px 0px 0px;
+    }
+    body.lock {
+        overflow: hidden;
+    }
+}
+.upward {
+    position: fixed;
+    bottom: 700px;
+    right: 40px;
+    width: 70px;
+    height: 70px;
+    background: url(../../../imgs/up.png);
+    background-size: cover;
+    z-index: 1;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.upward.active {
+    bottom: 40px;
+    visibility: visible;
+    opacity: 1;
+}
