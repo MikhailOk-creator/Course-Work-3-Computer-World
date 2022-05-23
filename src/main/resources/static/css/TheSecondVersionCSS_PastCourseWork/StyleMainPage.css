@@ -9,7 +9,7 @@ html,body {
     font-family: Arial, "Helvetica Neue",Helvetica,sans-serif;
 }
 body {
-    background-image: url("/static/imgs/regnum_picture_15613153922135113_normal.jpg");
+    background-image: url('../../imgs/regnum_picture_15613153922135113_normal.jpg');
     background-attachment: fixed;
 }
 .header {
@@ -221,7 +221,7 @@ ul {
     right: 40px;
     width: 70px;
     height: 70px;
-    background: url(../imgs/up.png);
+    background: url('../../imgs/up.png');
     background-size: cover;
     z-index: 1;
     cursor: pointer;
