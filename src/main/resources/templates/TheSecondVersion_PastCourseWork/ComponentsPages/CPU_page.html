@@ -5,26 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Процессоры</title>
-    <link rel="stylesheet" href="../../../static/css/TheSecondVersionCSS_PastCourseWork/ComponentsPagesCSS/StyleCPU_page.css">
-    <link rel="icon" href="../../../static/imgs/Icons/icon-processor.png">
+    <link th:href="@{/css/TheSecondVersionCSS_PastCourseWork/ComponentsPagesCSS/StyleCPU_page.css}" rel="stylesheet" />
+    <link th:href="@{/imgs/Icons/favicon.ico}" rel="icon" />
 </head>
 <body>
     <div class="upward" onclick="scrollTopTop()"></div>
     <header class="header">
         <div class="container">
             <div class="header__body">
-                <a href="../../index.html" class="header__logo">
-                    <img src="../../../static/imgs/Logo.png" alt="">
+                <a th:href="@{/}" class="header__logo">
+                    <img th:src="@{/imgs/Logo.png}" />
                 </a>
                 <div class="header__burger">
                     <span></span>
                 </div>
                 <nav class="header__menu">
                     <ul class="header__list">
-                        <li><a href="../../../../static/css/MainPage/MainPage.html" class="header__link">Главная</a></li>
-                        <li><a href="../brands.html" class="header__link">Бренды</a></li>
-                        <li><a href="../selectionOfComponents.html" class="header__link">Подбор комплектующих</a></li>
-                        <li><a href="../about_site.html" class="header__link">О САЙТЕ</a></li>
+                        <li><a th:href="@{/}" class="header__link">Главная</a></li>
+                        <li><a th:href="@{/brands}" class="header__link">Бренды</a></li>
+                        <li><a th:href="@{/selectionOfComponents}" class="header__link">Подбор комплектующих</a></li>
+                        <li><a th:href="@{/about}" class="header__link">О САЙТЕ</a></li>
+                        <li><a href="/login" class="header__link">Личный кабинет</a></li>
                     </ul>
                 </nav>
             </div>
@@ -39,8 +40,8 @@
                 <strong>Процессор </strong>- (сокращенно ЦП – центральный процессор или международное CPU) – это главный вычислительный элемент в компьютере. Фактически он является сердцем компьютера. На нем лежит вся работа по обработке данных. Остановилось сердце – умер компьютер. Работа процессора, в некоторой степени, действительно напоминает работу сердца, т.к. он работает под управлением электронных импульсов, так называемых тактов. Тактовая частота – это важнейшая характеристика процессора, она измеряется в гигагерцах (Ггц). От нее зависит скорость и производительность вашего ПК. Выше тактовая частота, значит быстрее скорость вычислений. Современные процессоры выполняют несколько миллионов операций в секунду.   
             </p><br>
             <div class="main_image">
-                <img src="../../../static/imgs/CPU_Intel_.jpg">
-                <img src="../../../static/imgs/157420_protsessor_amd_ryzen_3_2200g_oem.jpg">
+                <img th:src="@{/imgs/CPU_Intel_.jpg}" />
+                <img th:src="@{/imgs/157420_protsessor_amd_ryzen_3_2200g_oem.jpg}"/>
             </div><br>
             <p>
                 Физически процессор представляет собой металлическую пластинку со множеством ножек (выводов), устанавливаемую в так называемый сокет (разъем) материнской платы. Внутри пластины находится кристалл полупроводника, содержащий до 2 млрд. логических элементов — транзисторов. Их размер настолько мал, что они умещаются на кристалле площадью 4-6 см<sup>2</sup>.
@@ -58,131 +59,18 @@
                 <strong>Количество ядер. </strong>Ядро – это главный вычислительный модуль процессора. Современные процессоры заключают в одном корпусе от 2 до 8 вычислительных ядер. Такой подход позволяет увеличить производительность ЦП, за счет распределения обработки данных по ядрам. Для простоты понимания можно сказать,что в одном корпусе размещены несколько процессоров.
             </p><br>
             <p>
-                Выбирая компьютер для покупки, сразу определитесь, для чего он вам нужен. Если только для офисных задач и интернета, то покупайте компьютер с двухядерным процессором. Для игр, обработки видео и трехмерной графики или для работы лучше будет компьютер с 4 или 6 ядрами.
+                Выбирая компьютер для покупки, сразу определитесь, для чего он вам нужен. Если только для офисных задач и интернета, то покупайте компьютер с двухъядерным процессором. Для игр, обработки видео и трехмерной графики или для работы лучше будет компьютер с 4 или 6 ядрами.
             </p>
         </div><br>
         <div class="real_processors">
             <h1>Примеры реальных процессоров</h1><br>
             <ul class="list_of_processors">
-                <li class="Intel">
-                    <h2>Intel Core i5 Comet Lake i5-10400 OEM</h2><br>
-                    <div id="Intel_Corei5_10400" class="inf">
-                        <div class="processor_img">
-                            <a href="https://www.e-katalog.ru/INTEL-I5-10400-OEM.htm" target="_blank">
-                                <img class="Intel_img" src="../../../static/imgs/Процессоры/i510400.jpg">
-                            </a>
-                        </div>
-                        <div class="specifications">
-                            <p>Техпроцесс: 14 нм</p>
-                            <p>Кол-во ядер: 6 cores</p>
-                            <p>Кол-во потоков: 12 threads</p>
-                            <p>Тактовая частота: 2.9 ГГц</p>
-                            <p>Частота TurboBoost / TurboCore: 4.3 ГГц</p>
-                            <p>Модель IGP: UHD Graphics 630</p>
-                            <p>Тепловыделение (TDP): 65 Вт</p>
-                            <p>Макс. рабочая температура: 100 °С</p>
-                            <p>Макс. объем поддерживаемой оперативной памяти: 128 ГБ</p>
-                            <p>Макс. частота DDR4: 2666 МГц</p>
-                        </div>
-                    </div>
-                </li><br>
-                <li class="AMD">
-                    <h2>AMD Ryzen 5 Matisse 3600 BOX</h2><br>
-                    <div id="AMD_Ryzen5_3600" class="inf">
-                        <a class="processor_img" href="https://www.e-katalog.ru/AMD-3600-BOX.htm" target="_blank">
-                            <img class="AMD_img" src="../../../static/imgs/Процессоры/Ryzen53600.png">
-                        </a>
-                        <div class="specifications">
-                            <p>Техпроцесс: 7 нм</p>
-                            <p>Кол-во ядер: 6 cores</p>
-                            <p>Кол-во потоков: 12 threads</p>
-                            <p>Тактовая частота: 3.6 ГГц</p>
-                            <p>Частота TurboBoost / TurboCore: 4.2 ГГц</p>
-                            <p>Модель IGP: отсутствует</p>
-                            <p>Тепловыделение (TDP): 65 Вт</p>
-                            <p>Макс. объем поддерживаемой оперативной памяти: 128 ГБ</p>
-                            <p>Макс. частота DDR4: 3200 МГц</p>
-                        </div>
-                    </div>
-                </li><br>
-                <li class="AMD">
-                    <h2>AMD Ryzen 7 Vermeer 5800X BOX</h2><br>
-                    <div id="AMD_Ryzen7_5800X" class="inf">
-                        <div class="processor_img">
-                            <a href="https://www.e-katalog.ru/AMD-5800X-BOX.htm" target="_blank">
-                                <img class="AMD_img" src="../../../static/imgs/Процессоры/Ryzen75800X.png">
-                            </a>
-                        </div>
-                        <div class="specifications">
-                            <p>Техпроцесс: 7 нм</p>
-                            <p>Кол-во ядер: 8 cores</p>
-                            <p>Кол-во потоков: 16 threads</p>
-                            <p>Тактовая частота: 3.8 ГГц</p>
-                            <p>Частота TurboBoost / TurboCore: 4.7 ГГц</p>
-                            <p>Модель IGP: отсутствует</p>
-                            <p>Тепловыделение (TDP): 105 Вт</p>
-                            <p>Макс. частота DDR4: 3200 МГц</p>
-                        </div>
-                    </div>
-                </li><br>
-                <li class="Intel">
-                    <h2>Intel Core i9 Alder Lake i9-12900K BOX</h2><br>
-                    <div id="Intel_Corei9_12900K" class="inf">
-                        <a class="processor_img" href="https://www.e-katalog.ru/INTEL-I9-12900K-BOX.htm" target="_blank">
-                            <img class="Intel_img" src="../../../static/imgs/Процессоры/i912900K.jpg">
-                        </a>
-                        <div class="specifications">
-                            <p>Техпроцесс: 10 нм</p>
-                            <p>Кол-во ядер: 16 cores</p>
-                            <p>Кол-во высокопроизводительных ядер: 8</p>
-                            <p>Кол-во энергоэффективных ядер: 8</p>
-                            <p>Кол-во потоков: 24 threads</p>
-                            <p>Тактовая частота высокопроизводительных ядер: 3.2 ГГц</p>
-                            <p>Тактовая частота энергоэффективных ядер: 2.4 ГГц</p>
-                            <p>Частота TurboBoost / TurboCore: 5.2 ГГц</p>
-                            <p>Максимальная частота высокопроизводительных ядер: 5.1 ГГц</p>
-                            <p>Максимальная частота энергоэффективных ядер: 3.9 ГГц</p>
-                            <p>Модель IGP: UHD Graphics 770</p>
-                            <p>Тепловыделение (TDP): 125 Вт</p>
-                            <p>Тепловыделение Max (TDP): 241 Вт</p>
-                            <p>Макс. рабочая температура: 100 °С</p>
-                            <p>Макс. объем поддерживаемой оперативной памяти: 128 ГБ</p>
-                            <p>Макс. частота DDR4: 3200 МГц</p>
-                            <p>Макс. частота DDR5: 4800 МГц</p>
-                        </div>
-                    </div>
-                </li><br>
-                <li class="Intel">
-                    <h2>Intel Core i5 Alder Lake i5-12600K BOX</h2><br>
-                    <div id="Intel_Corei5_12600K" class="inf">
-                        <a class="processor_img" href="https://www.e-katalog.ru/INTEL-I5-12600K-BOX.htm" target="_blank">
-                            <img class="Intel_img" src="../../../static/imgs/Процессоры/i512600K.jpg">
-                        </a>
-                        <div class="specifications">
-                            <p>Техпроцесс: 10 нм</p>
-                            <p>Кол-во ядер: 10 cores</p>
-                            <p>Кол-во высокопроизводительных ядер: 6</p>
-                            <p>Кол-во энергоэффективных ядер: 4</p>
-                            <p>Кол-во потоков: 16 threads</p>
-                            <p>Тактовая частота высокопроизводительных ядер: 3.7 ГГц</p>
-                            <p>Тактовая частота энергоэффективных ядер: 2.8 ГГц</p>
-                            <p>Максимальная частота высокопроизводительных ядер: 4.9 ГГц</p>
-                            <p>Максимальная частота энергоэффективных ядер: 3.6 ГГц</p>
-                            <p>Модель IGP: UHD Graphics 770</p>
-                            <p>Тепловыделение (TDP): 125 Вт</p>
-                            <p>Тепловыделение Max (TDP): 150 Вт</p>
-                            <p>Макс. рабочая температура: 100 °С</p>
-                            <p>Макс. объем поддерживаемой оперативной памяти: 128 ГБ</p>
-                            <p>Макс. частота DDR4: 3200 МГц</p>
-                            <p>Макс. частота DDR5: 4800 МГц</p>
-                        </div>
-                    </div>
-                </li>
+
             </ul>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="../../../static/js/script_for_burger_menu.js"></script>
-    <script src="../../../static/js/scroll_up_script.js"></script>
+    <script th:src="@{/js/script_for_burger_menu.js}"></script>
+    <script th:src="@{/js/scroll_up_script.js}"></script>
 </body>
 </html>

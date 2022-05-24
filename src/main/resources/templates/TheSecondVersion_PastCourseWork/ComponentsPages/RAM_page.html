@@ -5,26 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оперативная память</title>
-    <link rel="stylesheet" href="../../../static/css/TheSecondVersionCSS_PastCourseWork/ComponentsPagesCSS/StyleRAM_page.css">
-    <link rel="icon" href="../../../static/imgs/Icons/icon-processor.png">
+    <link th:href="@{/css/TheSecondVersionCSS_PastCourseWork/ComponentsPagesCSS/StyleRAM_page.css}" rel="stylesheet" />
+    <link th:href="@{/imgs/Icons/favicon.ico}" rel="icon" />
 </head>
 <body>
     <div class="upward" onclick="scrollTopTop()"></div>
     <header class="header">
         <div class="container">
             <div class="header__body">
-                <a href="../../index.html" class="header__logo">
-                    <img src="../../../static/imgs/Logo.png" alt="">
+                <a th:href="@{/}" class="header__logo">
+                    <img th:src="@{/imgs/Logo.png}" />
                 </a>
                 <div class="header__burger">
                     <span></span>
                 </div>
                 <nav class="header__menu">
                     <ul class="header__list">
-                        <li><a href="../../../../static/css/MainPage/MainPage.html" class="header__link">Главная</a></li>
-                        <li><a href="../brands.html" class="header__link">Бренды</a></li>
-                        <li><a href="../selectionOfComponents.html" class="header__link">Подбор комплектующих</a></li>
-                        <li><a href="../about_site.html" class="header__link">О САЙТЕ</a></li>
+                        <li><a th:href="@{/}" class="header__link">Главная</a></li>
+                        <li><a th:href="@{/brands}" class="header__link">Бренды</a></li>
+                        <li><a th:href="@{/selectionOfComponents}" class="header__link">Подбор комплектующих</a></li>
+                        <li><a th:href="@{/about}" class="header__link">О САЙТЕ</a></li>
+                        <li><a href="/login" class="header__link">Личный кабинет</a></li>
                     </ul>
                 </nav>
             </div>
@@ -58,41 +59,12 @@
         <div class="real_ram">
             <h1>Примеры реальных плашек ОЗУ</h1><br>
             <ul class="list_of_ram">
-                <li>
-                    <h2>Crucial Ballistix DDR4 2x8Gb</h2><br>
-                    <div class="inf">
-                        <a class="RAM_img" href="https://www.e-katalog.ru/CRUCIAL-BL2K8G32C16U4B.htm" target="_blank">
-                            <img src="../../../static/imgs/Плашки%20ОЗУ/Crucial_2x8.jpg" height="215px" width="423px">
-                        </a>
-                        <div class="specifications">
-                            <p>Объем памяти комплекта: 16 ГБ</p>
-                            <p>Кол-во планок в комплекте: 2 шт</p>
-                            <p>Форм-фактор памяти: DIMM</p>
-                            <p>Тип памяти: DDR4</p>
-                            <p>Тактовая частота: 3200 МГц</p>
-                        </div>
-                    </div>
-                </li><br>
-                <li>
-                    <h2>Corsair Vengeance RGB Pro DDR4 1x8Gb</h2><br>
-                    <div class="inf">
-                        <a class="RAM_img" href="https://www.e-katalog.ru/CORSAIR-CM4X8GD3200C16W4.htm" target="_blank">
-                            <img src="../../../static/imgs/Плашки%20ОЗУ/Corsair_1x8.jpg" height="163px" width="423px">
-                        </a>
-                        <div class="specifications">
-                            <p>Объем памяти комплекта: 8 ГБ</p>
-                            <p>Кол-во планок в комплекте: 1 шт</p>
-                            <p>Форм-фактор памяти: DIMM</p>
-                            <p>Тип памяти: DDR4</p>
-                            <p>Тактовая частота: 3200 МГц</p>
-                        </div>
-                    </div>
-                </li>
+
             </ul>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="../../../static/js/script_for_burger_menu.js"></script>
-    <script src="../../../static/js/scroll_up_script.js"></script>
+    <script th:src="@{/js/script_for_burger_menu.js}"></script>
+    <script th:src="@{/js/scroll_up_script.js}"></script>
 </body>
 </html>

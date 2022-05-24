@@ -5,26 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Жёсткие диски</title>
-    <link rel="stylesheet" href="../../../static/css/TheSecondVersionCSS_PastCourseWork/ComponentsPagesCSS/StyleHDD_page.css">
-    <link rel="icon" href="../../../static/imgs/Icons/icon-processor.png">
-</head>
+    <link th:href="@{/css/TheSecondVersionCSS_PastCourseWork/ComponentsPagesCSS/StyleHDD_page.css}" rel="stylesheet" />
+    <link th:href="@{/imgs/Icons/favicon.ico}" rel="icon" /></head>
 <body>
     <div class="upward" onclick="scrollTopTop()"></div>
     <header class="header">
         <div class="container">
             <div class="header__body">
-                <a href="../../index.html" class="header__logo">
-                    <img src="../../../static/imgs/Logo.png" alt="">
+                <a th:href="@{/}" class="header__logo">
+                    <img th:src="@{/imgs/Logo.png}" />
                 </a>
                 <div class="header__burger">
                     <span></span>
                 </div>
                 <nav class="header__menu">
                     <ul class="header__list">
-                        <li><a href="../../../../static/css/MainPage/MainPage.html" class="header__link">Главная</a></li>
-                        <li><a href="../brands.html" class="header__link">Бренды</a></li>
-                        <li><a href="../selectionOfComponents.html" class="header__link">Подбор комплектующих</a></li>
-                        <li><a href="../about_site.html" class="header__link">О САЙТЕ</a></li>
+                        <li><a th:href="@{/}" class="header__link">Главная</a></li>
+                        <li><a th:href="@{/brands}" class="header__link">Бренды</a></li>
+                        <li><a th:href="@{/selectionOfComponents}" class="header__link">Подбор комплектующих</a></li>
+                        <li><a th:href="@{/about}" class="header__link">О САЙТЕ</a></li>
+                        <li><a href="/login" class="header__link">Личный кабинет</a></li>
                     </ul>
                 </nav>
             </div>
@@ -40,7 +40,7 @@
             </p><br>
             <h3>Устройство жесткого диска.</h3>
             <p>
-                Данные сохраняются на одной или нескольких алюминиевых или стеклянных круглых пластинах (дисках), покрытых магнитным слоем. Диск(и) находятся на шпинделе и вращаются с большой скоростью, а блок подвижных магнитных головок считывает или записывает данные на поверхность пластин.
+                Данные сохраняются на одной или нескольких алюминиевых, или стеклянных круглых пластинах (дисках), покрытых магнитным слоем. Диск(и) находятся на шпинделе и вращаются с большой скоростью, а блок подвижных магнитных головок считывает или записывает данные на поверхность пластин.
             </p>
             <p>
                 Диск(и) с блоком головок заключены в металлический корпус для защиты от пыли и механических воздействий. На корпусе находится электронная плата, которая управляет работой винчестера – так называемый контроллер. Все это устройство представляет единый блок, который располагается в специально отведенном для него месте «системника» и подключенный к материнской плате специальным кабелем.
@@ -65,62 +65,12 @@
         <div class="real_hdd">
             <h1>Примеры реальных жестких дисков</h1><br>
             <ul class="list_of_hdd">
-                <li>
-                    <h2>WD Blue WD10EZEX</h2><br>
-                    <div class="inf">
-                        <div class="hdd_img">
-                            <a href="https://www.e-katalog.ru/WD-WD10EZEX.htm" target="_blank">
-                                <img src="../../../static/imgs/HDD/WD_Blue.jpg" height="320px" width="220px">
-                            </a>
-                        </div>
-                        <div class="specifications">
-                            <p>Объем: 1 ТБ</p>
-                            <p>Интерфейсы подключения: SATA, SATA 2, SATA 3</p>
-                            <p>Частота вращения шпинделя: 7200 об/мин</p>
-                            <p>Объем буфера обмена: 64 МБ</p>
-                            <p>Форм-фактор: 3.5 "</p>
-                        </div>
-                    </div>
-                </li><br>
-                <li>
-                    <h2>Seagate BarraCuda Compute ST1000DM010</h2><br>
-                    <div class="inf">
-                        <div class="hdd_img">
-                            <a href="https://www.e-katalog.ru/SEAGATE-ST1000DM010.htm" target="_blank">
-                                <img src="../../../static/imgs/HDD/Seagate_Baracuda.jpg" height="320px" width="220px">
-                            </a>
-                        </div>
-                        <div class="specifications">
-                            <p>Объем: 1 ТБ</p>
-                            <p>Интерфейсы подключения: SATA, SATA 2, SATA 3</p>
-                            <p>Частота вращения шпинделя: 7200 об/мин</p>
-                            <p>Объем буфера обмена: 64 МБ</p>
-                            <p>Форм-фактор: 3.5 "</p>
-                        </div>
-                    </div>
-                </li><br>
-                <li>
-                    <h2>WD Black Performance Mobile 2.5" WD10SPSX</h2><br>
-                    <div class="inf">
-                        <div class="hdd_img">
-                            <a href="https://www.e-katalog.ru/WD-WD10SPSX.htm" target="_blank">
-                                <img src="../../../static/imgs/HDD/WD_Black.jpg" height="320px" width="220px">
-                            </a>
-                        </div>
-                        <div class="specifications">
-                            <p>Объем: 1 ТБ</p>
-                            <p>Интерфейсы подключения: SATA 3</p>
-                            <p>Частота вращения шпинделя: 7200 об/мин</p>
-                            <p>Объем буфера обмена: 64 МБ</p>
-                            <p>Форм-фактор: 2.5 "</p>
-                        </div>
-                    </div>
-                </li>
+
             </ul>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="../../../static/js/script_for_burger_menu.js"></script>
-    <script src="../../../static/js/scroll_up_script.js"></script>
+    <script th:src="@{/js/script_for_burger_menu.js}"></script>
+    <script th:src="@{/js/scroll_up_script.js}"></script>
 </body>
 </html>

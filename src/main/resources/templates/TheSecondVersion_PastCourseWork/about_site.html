@@ -5,25 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О сайте</title>
-    <link rel="stylesheet" href="About_site/CSS/StyleAbout_site.css">
-    <link rel="icon" href="../../static/imgs/Icons/icon-processor.png">
+    <link href="../static/css/TheSecondVersionCSS_PastCourseWork/StyleAbout_site.css" th:href="@{/css/TheSecondVersionCSS_PastCourseWork/StyleMainPage.css}" rel="stylesheet" />
+    <link href="../static/imgs/Icons/favicon.ico" th:href="@{/imgs/Icons/favicon.ico}" rel="icon" />
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header__body">
-                <a href="../index.html" class="header__logo">
-                    <img src="../../static/imgs/Logo.png" alt="">
+                <a href="/" class="header__logo">
+                    <img th:src="@{/imgs/Logo.png}" />
                 </a>
                 <div class="header__burger">
                     <span></span>
                 </div>
                 <nav class="header__menu">
                     <ul class="header__list">
-                        <li><a href="../../../../static/css/MainPage/MainPage.html" class="header__link">Главная</a></li>
-                        <li><a href="brands.html" class="header__link">Бренды</a></li>
-                        <li><a href="selectionOfComponents.html" class="header__link">Подбор комплектующих</a></li>
-                        <li><a href="../About_site/About_site.html" class="header__link">О САЙТЕ</a></li>
+                        <li><a th:href="@{/}" class="header__link">Главная</a></li>
+                        <li><a th:href="@{/brands}" class="header__link">Бренды</a></li>
+                        <li><a th:href="@{/selectionOfComponents}" class="header__link">Подбор комплектующих</a></li>
+                        <li><a th:href="@{/about}" class="header__link">О САЙТЕ</a></li>
+                        <li><a href="/login" class="header__link">Личный кабинет</a></li>
                     </ul>
                 </nav>
             </div>
@@ -34,7 +35,7 @@
             <h1>О сайте</h1><br>
         </div>
         <div class="information">
-            <p>Данный сайт является курсовой работой по дисциплине «Разработка клиентских частей интернет ресурсов».</p>
+            <p>Данное веб-приложение является курсовой работой по дисциплине «Шаблоны программных платформ языка Java».</p>
             <p>На данном сайте вы сможете узнать какие существуют компьютерные комплектующие и какие у них есть характеристики. Также на сайте вы сможете о производителях, а именно какой производитель какие типы «железок» производит.</p>
             <br>
             <p>Разработчики: Охапкин Михаил</p>
@@ -42,6 +43,6 @@
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="../../static/js/script_for_burger_menu.js"></script>
+    <script th:src="@{/js/script_for_burger_menu.js}"></script>
 </body>
 </html>

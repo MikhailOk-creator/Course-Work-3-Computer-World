@@ -5,26 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Видеокарты</title>
-    <link rel="stylesheet" href="../../../static/css/TheSecondVersionCSS_PastCourseWork/ComponentsPagesCSS/StyleGPU_page.css">
-    <link rel="icon" href="../../../static/imgs/Icons/icon-processor.png">
+    <link th:href="@{/css/TheSecondVersionCSS_PastCourseWork/ComponentsPagesCSS/StyleGPU_page.css}" rel="stylesheet" />
+    <link th:href="@{/imgs/Icons/favicon.ico}" rel="icon" />
 </head>
 <body>
     <div class="upward" onclick="scrollTopTop()"></div>
     <header class="header">
         <div class="container">
             <div class="header__body">
-                <a href="../../index.html" class="header__logo">
-                    <img src="../../../static/imgs/Logo.png" alt="">
+                <a th:href="@{/}" class="header__logo">
+                    <img th:src="@{/imgs/Logo.png}" />
                 </a>
                 <div class="header__burger">
                     <span></span>
                 </div>
                 <nav class="header__menu">
                     <ul class="header__list">
-                        <li><a href="../../../../static/css/MainPage/MainPage.html" class="header__link">Главная</a></li>
-                        <li><a href="../brands.html" class="header__link">Бренды</a></li>
-                        <li><a href="../selectionOfComponents.html" class="header__link">Подбор комплектующих</a></li>
-                        <li><a href="../about_site.html" class="header__link">О САЙТЕ</a></li>
+                        <li><a th:href="@{/}" class="header__link">Главная</a></li>
+                        <li><a th:href="@{/brands}" class="header__link">Бренды</a></li>
+                        <li><a th:href="@{/selectionOfComponents}" class="header__link">Подбор комплектующих</a></li>
+                        <li><a th:href="@{/about}" class="header__link">О САЙТЕ</a></li>
+                        <li><a href="/login" class="header__link">Личный кабинет</a></li>
                     </ul>
                 </nav>
             </div>
@@ -36,7 +37,7 @@
         </div>
         <div class="theoretical_introduction">
             <p>
-                <strong>Видеокарта</strong> – это компонент материнской платы, отвечающий за обработку видеоданных и вывод на монитор изображения. Можно встретить названия: видеоадаптер, графическая плата, графическая карта, графический адаптер или на компьютерном сленге – «видяха». Есть два вида видеокарт – встроенные и внешние.
+                <strong>Видеокарта</strong> – это компонент материнской платы, отвечающий за обработку видео-данных и вывод на монитор изображения. Можно встретить названия: видеоадаптер, графическая плата, графическая карта, графический адаптер или на компьютерном сленге – «видяха». Есть два вида видеокарт – встроенные и внешние.
             </p><br>
             <h3>Встроенные видеокарты</h3>
             <p>
@@ -47,7 +48,7 @@
             </p><br>
             <h3>Внешняя видеокарта</h3>
             <p>
-                Внешняя видеокарта для обработки видеоданных использует свои ресурсы, т.к. имеет собственный процессор (графический процессор – GPU) и оперативную память. Она является съемной и располагается на материнской плате в специальном разъеме – слоте, что позволяет легко ее заменить в случае выхода из строя или для замены на более производительную.
+                Внешняя видеокарта для обработки видео-данных использует свои ресурсы, т.к. имеет собственный процессор (графический процессор – GPU) и оперативную память. Она является съемной и располагается на материнской плате в специальном разъеме – слоте, что позволяет легко ее заменить в случае выхода из строя или для замены на более производительную.
             </p>
             <p>
                 Внешняя видеокарта намного производительней встроенной, из-за чего ее графический процессор выделяет много тепла. Во избежание перегрева и выхода из строя, все современные внешние видеокарты имеют систему охлаждения в виде вентилятора, установленного на графический процессор.
@@ -75,97 +76,12 @@
         <div class="real_gpu">
             <h1>Примеры реальных видеокарты</h1><br>
             <ul class="list_of_gru">
-                <li class="NVidia">
-                    <h2>Gigabyte GeForce RTX 2060 D6 6G</h2><br>
-                    <div class="inf">
-                        <a class="gpu_img" href="https://www.e-katalog.ru/GIGABYTE-GEFORCE-RTX-2060-D6-6G.htm" target="_blank">
-                            <img src="../../../static/imgs/Видоекарты/Gygabyte_rtx2060.jpg" height="283" width="500">
-                        </a>
-                        <div class="specifications">
-                            <p>Модель GPU: NVIDIA GeForce RTX 2060</p>
-                            <p>Объем памяти: 6 ГБ</p>
-                            <p>Тип памяти: GDDR6</p><br>
-                            <p>Макс. подключаемых мониторов: 4</p>
-                            <p>HDMI: 1 шт</p>
-                            <p>DisplayPort: 3 шт</p><br>
-                            <p>Поддержка VR: +</p>
-                        </div>
-                    </div>
-                </li><br>
-                <li class="AMD">
-                    <h2>Asus Radeon RX 6900 XT TUF TOP GAMING</h2><br>
-                    <div class="inf">
-                        <a class="gpu_img" href="https://www.e-katalog.ru/ASUS-RADEON-RX-6900-XT-TUF-TOP-GAMING.htm" target="_blank">
-                            <img src="../../../static/imgs/Видоекарты/Asus_rx6900.jpg" height="254" width="500">
-                        </a>
-                        <div class="specifications">
-                            <p>Модель GPU: AMD Radeon RX 6900 XT</p>
-                            <p>Объем памяти: 16 ГБ</p>
-                            <p>Тип памяти: GDDR6</p><br>
-                            <p>Макс. подключаемых мониторов: 4</p>
-                            <p>HDMI: 1 шт</p>
-                            <p>DisplayPort: 3 шт</p><br>
-                            <p>Поддержка VR: +</p>
-                        </div>
-                    </div>
-                </li><br>
-                <li class="NVidia">
-                    <h2>Asus GeForce RTX 3090 TUF OC</h2><br>
-                    <div class="inf">
-                        <a class="gpu_img" href="https://www.e-katalog.ru/ASUS-GEFORCE-RTX-3090-TUF-OC.htm" target="_blank">
-                            <img src="../../../static/imgs/Видоекарты/Asus_rtx3090.jpg" height="250" width="500">
-                        </a>
-                        <div class="specifications">
-                            <p>Модель GPU: NVIDIA GeForce RTX 3090</p>
-                            <p>Объем памяти: 24 ГБ</p>
-                            <p>Тип памяти: GDDR6X</p><br>
-                            <p>Макс. подключаемых мониторов: 5</p>
-                            <p>HDMI: 2 шт</p>
-                            <p>DisplayPort: 3 шт</p><br>
-                            <p>Поддержка VR: +</p>
-                        </div>
-                    </div>
-                </li><br>
-                <li class="NVidia">
-                    <h2>Palit GeForce GTX 1660 Dual</h2><br>
-                    <div class="inf">
-                        <a class="gpu_img" href="https://www.e-katalog.ru/PALIT-GEFORCE-GTX-1660-DUAL.htm" target="_blank">
-                            <img src="../../../static/imgs/Видоекарты/Palit_gtx1660.jpg" height="255" width="500">
-                        </a>
-                        <div class="specifications">
-                            <p>Модель GPU: NVIDIA GeForce GTX 1660</p>
-                            <p>Объем памяти: 6 ГБ</p>
-                            <p>Тип памяти: GDDR5</p><br>
-                            <p>Макс. подключаемых мониторов: 3</p>
-                            <p>DVI-D: 1 шт</p>
-                            <p>HDMI: 1 шт</p>
-                            <p>DisplayPort: 1 шт</p><br>
-                            <p>Поддержка VR: +</p>
-                        </div>
-                    </div>
-                </li><br>
-                <li class="AMD">
-                    <h2>Gigabyte Radeon RX 6600 EAGLE 8G</h2><br>
-                    <div class="inf">
-                        <a class="gpu_img" href="https://www.e-katalog.ru/GIGABYTE-RADEON-RX-6600-EAGLE-8G.htm" target="_blank">
-                            <img src="../../../static/imgs/Видоекарты/Gygabyte_rx6600.jpg" height="213" width="493">
-                        </a>
-                        <div class="specifications">
-                            <p>Модель GPU: AMD Radeon RX 6600</p>
-                            <p>Объем памяти: 8 ГБ</p>
-                            <p>Тип памяти: GDDR6</p><br>
-                            <p>Макс. подключаемых мониторов: 4</p>
-                            <p>HDMI: 2 шт</p>
-                            <p>DisplayPort: 2 шт</p><br>
-                            <p>Поддержка VR: +</p>
-                        </div>
-                    </div>
-                </li>
+
             </ul>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="../../../static/js/script_for_burger_menu.js"></script>
-    <script src="../../../static/js/scroll_up_script.js"></script>
+    <script th:src="@{/js/script_for_burger_menu.js}"></script>
+    <script th:src="@{/js/scroll_up_script.js}"></script>
 </body>
 </html>

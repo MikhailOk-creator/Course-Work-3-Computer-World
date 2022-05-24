@@ -5,26 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Блоки питания</title>
-    <link rel="stylesheet" href="../../../static/css/TheSecondVersionCSS_PastCourseWork/ComponentsPagesCSS/StylePSU_page.css">
-    <link rel="icon" href="../../../static/imgs/Icons/icon-processor.png">
-</head>
+    <link th:href="@{/css/TheSecondVersionCSS_PastCourseWork/ComponentsPagesCSS/StylePSU_page.css}" rel="stylesheet" />
+    <link th:href="@{/imgs/Icons/favicon.ico}" rel="icon" /></head>
 <body>
     <div class="upward" onclick="scrollTopTop()"></div>
     <header class="header">
         <div class="container">
             <div class="header__body">
-                <a href="../../index.html" class="header__logo">
-                    <img src="../../../static/imgs/Logo.png" alt="">
+                <a th:href="@{/}" class="header__logo">
+                    <img th:src="@{/imgs/Logo.png}" />
                 </a>
                 <div class="header__burger">
                     <span></span>
                 </div>
                 <nav class="header__menu">
                     <ul class="header__list">
-                        <li><a href="../../../../static/css/MainPage/MainPage.html" class="header__link">Главная</a></li>
-                        <li><a href="../brands.html" class="header__link">Бренды</a></li>
-                        <li><a href="../selectionOfComponents.html" class="header__link">Подбор комплектующих</a></li>
-                        <li><a href="../about_site.html" class="header__link">О САЙТЕ</a></li>
+                        <li><a th:href="@{/}" class="header__link">Главная</a></li>
+                        <li><a th:href="@{/brands}" class="header__link">Бренды</a></li>
+                        <li><a th:href="@{/selectionOfComponents}" class="header__link">Подбор комплектующих</a></li>
+                        <li><a th:href="@{/about}" class="header__link">О САЙТЕ</a></li>
+                        <li><a href="/login" class="header__link">Личный кабинет</a></li>
                     </ul>
                 </nav>
             </div>
@@ -63,53 +63,12 @@
         <div class="real_psu">
             <h1>Примеры реальных блоков питания</h1><br>
             <ul class="list_of_psu">
-                <li>
-                    <h2>FSP PNR PRO</h2><br>
-                    <div class="inf">
-                        <div class="psu_img">
-                            <a href="https://www.e-katalog.ru/FSP-ATX-500PNR-PRO.htm" target="_blank">
-                                <img src="../../../static/imgs/Блоки%20питания/FSP_PNR_PRO.jpg" width="300px" height="242px">
-                            </a>
-                        </div>
-                        <div class="specifications">
-                            <p>Мощность: 500 Вт</p>
-                            <p>Форм-фактор: ATX</p>
-                            <p>КПД: 81 %</p>
-                            <p>Питание MB/CPU: 24+8 (4+4) pin</p>
-                            <p>SATA: 3 шт</p>
-                            <p>MOLEX: 2 шт</p>
-                            <p>PCI-E 6pin: 1 шт</p>
-                            <p>PCI-E 8pin (6+2): 1 шт</p>
-                            <p>Мощность +12V: 408 Вт</p>
-                            <p>Мощность +3.3V +5V: 120 Вт</p>
-                        </div>
-                </li><br>
-                <li>
-                    <h2>Be quiet System Power 9</h2><br>
-                    <div class="inf">
-                        <div class="psu_img">
-                            <a href="https://www.e-katalog.ru/BE-QUIET-BN246.htm" target="_blank">
-                                <img src="../../../static/imgs/Блоки%20питания/Be_quite_Power_9.jpg" width="300px" height="324px">
-                            </a>
-                        </div>
-                        <div class="specifications">
-                            <p>Мощность: 500 Вт</p>
-                            <p>Форм-фактор: ATX</p>
-                            <p>КПД: 89 %</p>
-                            <p>Питание MB/CPU: 24+8 (4+4) pin</p>
-                            <p>SATA: 6 шт</p>
-                            <p>MOLEX: 2 шт</p>
-                            <p>PCI-E 8pin (6+2): 2 шт</p>
-                            <p>Мощность +12V: 456 Вт</p>
-                            <p>Мощность +3.3V +5V: 110 Вт</p>
-                        </div>
-                    </div>
-                </li>
+
             </ul>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="../../../static/js/script_for_burger_menu.js"></script>
-    <script src="../../../static/js/scroll_up_script.js"></script>
+    <script th:src="@{/js/script_for_burger_menu.js}"></script>
+    <script th:src="@{/js/scroll_up_script.js}"></script>
 </body>
 </html>

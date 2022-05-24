@@ -5,26 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Охлаждение</title>
-    <link rel="stylesheet" href="../../../static/css/TheSecondVersionCSS_PastCourseWork/ComponentsPagesCSS/StyleFAN_page.css">
-    <link rel="icon" href="../../../static/imgs/Icons/icon-processor.png">
-</head>
+    <link th:href="@{/css/TheSecondVersionCSS_PastCourseWork/ComponentsPagesCSS/StyleFAN_page.css}" rel="stylesheet" />
+    <link th:href="@{/imgs/Icons/favicon.ico}" rel="icon" /></head>
 <body>
     <div class="upward" onclick="scrollTopTop()"></div>
     <header class="header">
         <div class="container">
             <div class="header__body">
-                <a href="../../index.html" class="header__logo">
-                    <img src="../../../static/imgs/Logo.png" alt="">
+                <a th:href="@{/}" class="header__logo">
+                    <img th:src="@{/imgs/Logo.png}" />
                 </a>
                 <div class="header__burger">
                     <span></span>
                 </div>
                 <nav class="header__menu">
                     <ul class="header__list">
-                        <li><a href="../../../../static/css/MainPage/MainPage.html" class="header__link">Главная</a></li>
-                        <li><a href="../brands.html" class="header__link">Бренды</a></li>
-                        <li><a href="../selectionOfComponents.html" class="header__link">Подбор комплектующих</a></li>
-                        <li><a href="../about_site.html" class="header__link">О САЙТЕ</a></li>
+                        <li><a th:href="@{/}" class="header__link">Главная</a></li>
+                        <li><a th:href="@{/brands}" class="header__link">Бренды</a></li>
+                        <li><a th:href="@{/selectionOfComponents}" class="header__link">Подбор комплектующих</a></li>
+                        <li><a th:href="@{/about}" class="header__link">О САЙТЕ</a></li>
+                        <li><a href="/login" class="header__link">Личный кабинет</a></li>
                     </ul>
                 </nav>
             </div>
@@ -39,10 +39,10 @@
                 <strong>Система охлаждения компьютера</strong> — набор средств для отвода тепла от нагревающихся в процессе работы компьютерных компонентов.
             </p>
             <p>
-                Для стационарных ПК существует два основных типа охлаждения: воздужный и водяной.
+                Для стационарных ПК существует два основных типа охлаждения: воздушный и водяной.
             </p><br>
             <p>
-                <strong>Воздушное охлаждение</strong> может быть как и с помощю обычных кулеров, так и при помощи полноценных башенных радиаторов (которые состоят из радиатора на тепловыделяющей детали и вентилятора, который обдувает этот радиатор — здесь существует множество вариантов и конфигураций.)
+                <strong>Воздушное охлаждение</strong> может быть как и с помощью обычных кулеров, так и при помощи полноценных башенных радиаторов (которые состоят из радиатора на тепловыделяющей детали и вентилятора, который обдувает этот радиатор — здесь существует множество вариантов и конфигураций.)
             </p>
             <p>
                 <strong>Водяное охлаждение</strong> работает по похожему принципу с башенными кулерами. Отличие в том, что здесь охлаждение происходит не в едином с радиатором контуре, а благодаря переносу охлаждающей жидкости по системе охлаждения от теплосъемника к отдельному радиатору, который обдувают вентиляторы. Большинство таких систем состоят из блока водяного охлаждения, двух шлангов, радиатора и нескольких вентиляторов.
@@ -51,63 +51,12 @@
         <div class="real_fan">
             <h1>Примеры реальных систем охлаждения</h1><br>
             <ul class="list_of_fan">
-                <li>
-                    <h2>Deepcool GAMMAXX 300</h2><br>
-                    <div class="inf" id="Deepcool">
-                        <div class="fan_img">
-                            <a href="https://www.e-katalog.ru/DEEPCOOL-GAMMAXX-300.htm" target="_blank">
-                                <img src="../../../static/imgs/Системы%20охлаждения/Deepcool_GAMMAXX.jpg" height="300px" width="256px">
-                            </a>
-                        </div>
-                        <div class="specifications">
-                            <p>Назначение: процессор</p>
-                            <p>Socket: AMD AM2/AM3/FM1/FM2, AMD AM4, Intel 775, Intel 1150, Intel 1155/1156, Intel 1151/1151 v2, Intel 1200</p>
-                            <p>Максимальный TDP: 130 Вт</p>
-                            <p>Уровень шума: 21 дБ</p>
-                            <p>Максимальные обороты: 1600 об/мин</p>
-                        </div>
-                    </div>
-                </li><br>
-                <li>
-                    <h2>Be quiet Dark Rock 4</h2><br>
-                    <div class="inf" id="Be_quite">
-                        <div class="fan_img">
-                            <a href="https://www.e-katalog.ru/BE-QUIET-DARK-ROCK-4.htm" target="_blank">
-                                <img src="../../../static/imgs/Системы%20охлаждения/Be_quite_DarkRock4.jpg" height="259px" width="256px">
-                            </a>
-                        </div>
-                        <div class="specifications">
-                            <p>Назначение: процессор</p>
-                            <p>Socket: AMD AM2/AM3/FM1/FM2, AMD AM4, Intel 1151/1151 v2, Intel 1200, Intel 2011/2011 v3, Intel 2066</p>
-                            <p>Максимальный TDP: 200 Вт</p>
-                            <p>Уровень шума: 21 дБ</p>
-                            <p>Максимальные обороты: 1400 об/мин</p>
-                        </div>
-                    </div>
-                </li><br>
-                <li>
-                    <h2>Deepcool GAMMAXX 300</h2><br>
-                    <div class="inf" id="NZXT">
-                        <div class="fan_img">
-                            <a href="https://www.e-katalog.ru/NZXT-KRAKEN-X53.htm" target="_blank">
-                                <img src="../../../static/imgs/Системы%20охлаждения/NZXT_X53.jpg" height="237px" width="567px">
-                            </a>  
-                        </div>
-                        <div class="specifications">
-                            <p>Назначение: процессор</p>
-                            <p>Socket: AMD TR4/TRX4, AMD AM4, Intel 1150, Intel 1366, Intel 1155/1156, Intel 1155/1156, Intel 1151/1151 v2, Intel 1200, Intel 2011/2011 v3, Intel 2066</p>
-                            <p>Длина трубки	400 мм</p>
-                            <p>Максимальный TDP: 200 Вт</p>
-                            <p>Уровень шума: 21 дБ</p>
-                            <p>Максимальные обороты вентиляторов: 2000 об/мин</p>
-                        </div>
-                    </div>
-                </li>
+
             </ul>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="../../../static/js/script_for_burger_menu.js"></script>
-    <script src="../../../static/js/scroll_up_script.js"></script>
+    <script th:src="@{/js/script_for_burger_menu.js}"></script>
+    <script th:src="@{/js/scroll_up_script.js}"></script>
 </body>
 </html>

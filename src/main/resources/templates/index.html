@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer World</title>
-    <link href="../static/css/TheSecondVersionCSS_PastCourseWork/StyleMainPage.css" th:href="@{/css/TheSecondVersionCSS_PastCourseWork/StyleMainPage.css}" rel="stylesheet" />
-    <!-- <link rel="icon" th:href="@{/imgs/Icons/icon-processor.png}"> -->
-    <link href="../static/imgs/Icons/favicon.ico" th:href="@{/imgs/Icons/favicon.ico}" rel="icon" />
+    <link th:href="@{/css/TheSecondVersionCSS_PastCourseWork/StyleMainPage.css}" rel="stylesheet" />
+    <link th:href="@{/imgs/Icons/favicon.ico}" rel="icon" />
 
 </head>
 <body>
@@ -15,7 +14,7 @@
     <header class="header">
         <div class="container">
             <div class="header__body">
-                <a href="/" class="header__logo">
+                <a th:href="@{/}" class="header__logo">
                     <img th:src="@{/imgs/Logo.png}" />
                 </a>
                 <div class="header__burger">
@@ -23,10 +22,10 @@
                 </div>
                 <nav class="header__menu">
                     <ul class="header__list">
-                        <li><a href="/" class="header__link">Главная</a></li>
-                        <li><a href="TheSecondVersion_PastCourseWork/brands.html" class="header__link">Бренды</a></li>
-                        <li><a href="TheSecondVersion_PastCourseWork/selectionOfComponents.html" class="header__link">Подбор комплектующих</a></li>
-                        <li><a href="TheSecondVersion_PastCourseWork/about_site.html" class="header__link">О САЙТЕ</a></li>
+                        <li><a th:href="@{/}" class="header__link">Главная</a></li>
+                        <li><a th:href="@{/brands}" class="header__link">Бренды</a></li>
+                        <li><a th:href="@{/selectionOfComponents}" class="header__link">Подбор комплектующих</a></li>
+                        <li><a th:href="@{/about}" class="header__link">О САЙТЕ</a></li>
                         <li><a href="/login" class="header__link">Личный кабинет</a></li>
                     </ul>
                 </nav>
@@ -38,28 +37,28 @@
             <h1>Основные комплектующие</h1>
             <br clear="all">
             <div class="list_of_components">
-                <a href="TheSecondVersion_PastCourseWork/ComponentsPages/CPU_page.html" class="partal_cpu_page">
+                <a th:href="@{/CPU}" class="partal_cpu_page">
                     <img th:src="@{/imgs/Icons/процесор.png}" />
                 </a>
-                <a href="TheSecondVersion_PastCourseWork/ComponentsPages/Motherboard_page.html" class="partal_motherboard_page">
+                <a th:href="@{/Motherboard}" class="partal_motherboard_page">
                     <img th:src="@{/imgs/Icons/материнская-плата.png}" />
                 </a>
-                <a href="TheSecondVersion_PastCourseWork/ComponentsPages/GPU_page.html" class="partal_gpu_page">
+                <a th:href="@{/GPU}" class="partal_gpu_page">
                     <img th:src="@{/imgs/Icons/видеокарта.png}" />
                 </a>
-                <a href="TheSecondVersion_PastCourseWork/ComponentsPages/RAM_page.html" class="partal_RAM_page">
+                <a th:href="@{/RAM}" class="partal_RAM_page">
                     <img th:src="@{/imgs/Icons/оперативная-память.png}" />
                 </a>
-                <a href="TheSecondVersion_PastCourseWork/ComponentsPages/SSD_page.html" class="partal_ssd_page">
+                <a th:href="@{/SSD}" class="partal_ssd_page">
                     <img th:src="@{/imgs/Icons/ssd.png}" />
                 </a>
-                <a href="TheSecondVersion_PastCourseWork/ComponentsPages/HDD_page.html" class="partal_hdd_page">
+                <a th:href="@{/HDD}" class="partal_hdd_page">
                     <img th:src="@{/imgs/Icons/hdd.png}" />
                 </a>
-                <a href="TheSecondVersion_PastCourseWork/ComponentsPages/FAN_page.html" class="partal_fan_page">
+                <a th:href="@{/FAN}" class="partal_fan_page">
                     <img th:src="@{/imgs/Icons/кулер.png}" />
                 </a>
-                <a href="TheSecondVersion_PastCourseWork/ComponentsPages/PSU_page.html" class="partal_psu_page">
+                <a th:href="@{/PSU}" class="partal_psu_page">
                     <img th:src="@{/imgs/Icons/блок-питания.png}" />
                 </a> 
             </div>
@@ -71,14 +70,14 @@
             <h2>Базовые понятия</h2>
             <p>Для начало надо выяснить, какие основные элементы присутствуют в компьютере</p>
             <ul>
-                <li><a href="TheSecondVersion_PastCourseWork/ComponentsPages/CPU_page.html" target="_blank">Процессор</a></li>
-                <li><a href="TheSecondVersion_PastCourseWork/ComponentsPages/Motherboard_page.html" target="_blank">Материнская плата</a></li>
-                <li><a href="TheSecondVersion_PastCourseWork/ComponentsPages/GPU_page.html" target="_blank">Видеокарта</a></li>
-                <li><a href="TheSecondVersion_PastCourseWork/ComponentsPages/RAM_page.html" target="_blank">Плашки оперативной памяти</a></li>
-                <li><a href="TheSecondVersion_PastCourseWork/ComponentsPages/SSD_page.html" target="_blank">Твердотельный накопитель</a></li>
-                <li><a href="TheSecondVersion_PastCourseWork/ComponentsPages/HDD_page.html" target="_blank">Жесткий диск</a></li>
-                <li><a href="TheSecondVersion_PastCourseWork/ComponentsPages/FAN_page.html" target="_blank">Охлаждающая система</a></li>
-                <li><a href="TheSecondVersion_PastCourseWork/ComponentsPages/PSU_page.html" target="_blank">Блок питания</a></li>
+                <li><a th:href="@{/CPU}" target="_blank">Процессор</a></li>
+                <li><a th:href="@{/Motherboard}" target="_blank">Материнская плата</a></li>
+                <li><a th:href="@{/GPU}" target="_blank">Видеокарта</a></li>
+                <li><a th:href="@{/RAM}" target="_blank">Плашки оперативной памяти</a></li>
+                <li><a th:href="@{/SSD}" target="_blank">Твердотельный накопитель</a></li>
+                <li><a th:href="@{/HDD}" target="_blank">Жесткий диск</a></li>
+                <li><a th:href="@{/FAN}" target="_blank">Охлаждающая система</a></li>
+                <li><a th:href="@{/PSU}" target="_blank">Блок питания</a></li>
             </ul><br>
             <h2>Как собрать ПК</h2>
             <p>В данном видое-уроке Вы сможете имея на руках уже приобретённые комплектующие собрать рабочий ПК</p><br>
