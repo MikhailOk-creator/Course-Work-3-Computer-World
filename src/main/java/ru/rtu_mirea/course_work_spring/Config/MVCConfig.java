@@ -6,23 +6,10 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-//@Configuration
-//@EnableWebMvc
-//public class MVCConfig  implements WebMvcConfigurer {
-//    public void addViewControllers(ViewControllerRegistry registry) {
-//        registry.addViewController("/login").setViewName("login");
-//    }
-//
-////    @Override
-////    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-////        registry
-////                .addResourceHandler("/css/**")
-////                .addResourceLocations("/static/css/");
-////        registry
-////                .addResourceHandler("/imgs/**")
-////                .addResourceLocations("/static/imgs/");
-////        registry
-////                .addResourceHandler("/js/**")
-////                .addResourceLocations("/static/js/");
-////    }
-//}
+/*@Configuration
+@EnableWebMvc
+public class MVCConfig  implements WebMvcConfigurer {
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/login").setViewName("login");
+    }
+}*/
