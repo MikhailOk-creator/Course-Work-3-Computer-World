@@ -26,7 +26,12 @@
                         <li><a th:href="@{/brands}" class="header__link">Бренды</a></li>
                         <li><a th:href="@{/selectionOfComponents}" class="header__link">Подбор комплектующих</a></li>
                         <li><a th:href="@{/about}" class="header__link">О САЙТЕ</a></li>
-                        <li><a href="/login" class="header__link">Личный кабинет</a></li>
+                        <div th:if="!${isAuthorized}">
+                            <li><a href="/login" class="header__link">Войти в кабинет</a></li>
+                        </div>
+                        <div th:if="${isAuthorized}">
+                            <li><a th:href="@{/account}" class="header__link">Личный кабинет</a></li>
+                        </div>
                     </ul>
                 </nav>
             </div>
@@ -34,6 +39,12 @@
     </header>
     <main class="container">
         <div class="types_of_components">
+            <div th:if="${isAdmin}">
+                <a class="btn" href="/admin"> Страница администратора </a>
+            </div>
+            <div th:if="${isWorker}">
+                <a class="btn" href="/worker"> Страница работника </a>
+            </div>
             <h1>Основные комплектующие</h1>
             <br clear="all">
             <div class="list_of_components">

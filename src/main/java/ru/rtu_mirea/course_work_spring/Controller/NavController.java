@@ -50,4 +50,7 @@ public class NavController {
     public String getPSU() {
         return "TheSecondVersion_PastCourseWork/ComponentsPages/PSU_page";
     }
+
+    @GetMapping("/account")
+    public String account() {return "userAccountDetails";}
 }
