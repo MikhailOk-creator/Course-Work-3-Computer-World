@@ -177,7 +177,7 @@ public class AdminService {
         } else {
             user.setRoles(Collections.singleton(Role.WORKER));
             user.setActive(true);
-            //user.setPassword(encoder.encode(user.getPassword()));
+            user.setPassword(encoder.encode(user.getPassword()));
             userRepo.save(user);
         }
         return "redirect:/admin";
