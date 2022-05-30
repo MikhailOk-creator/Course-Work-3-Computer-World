@@ -78,6 +78,9 @@
 <body>
 <a class="btn" href="/">Вернуться на главную страницу</a>
 <br>
+<form th:method="post" th:action="@{/logout}">
+    <input class="btn" type="submit" value="Выйти из системы">
+</form>
     <span style="color: green" th:text="${inputInfoMessage}"></span>
     <label class="titleSpan">
         Login :
