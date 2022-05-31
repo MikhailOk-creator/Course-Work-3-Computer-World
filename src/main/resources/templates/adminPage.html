@@ -76,6 +76,8 @@
 	        }
 	    }
     </style>
+    <link th:href="@{/imgs/Icons/favicon.ico}" rel="icon" />
+
 </head>
 <body>
 <a class="btn" href="/">Вернуться на главную страницу</a>
@@ -84,13 +86,13 @@
     <input class="btn" type="submit" value="Sign Out"/>
 </form>
 
-<div class="main">
+<!-- <div class="main">
     <div th:each="prod: ${prods}">
         <form th:action="@{/admin/checkClickedButton/{prod} (prod = ${prod})}" method="get">
             <input class="btn" type="submit" th:value="${prod}">
         </form>
     </div>
-</div>
+</div> -->
 
 <div th:each="product: ${list}">
     <div class="prodCart">
