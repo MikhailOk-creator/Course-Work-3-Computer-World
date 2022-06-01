@@ -86,7 +86,7 @@
         <span class="titleSpan" style="text-decoration : underline" th:text="${product.getType()}"></span>
         <br>
         <span class="titleSpan">Описание товара : </span>
-        <span class="notTitle" th:text="${product.getTitle()}"></span>
+        <span class="notTitle" th:text="${product.getName()}"></span>
         <br>
         <span class="titleSpan">Количество : </span>
         <span th:text="${product.getNumber()}"></span>
@@ -94,8 +94,8 @@
     </div>
     <form th:action="@{/order}" method="post" th:object="${order}">
         <div>
-            <label class="notTitle"> Name : <input type="text" th:field="*{name}"/> </label>
-            <span style="color: red" th:text="${name}"></span>
+            <label class="notTitle"> Name : <input type="text" th:field="*{realName}"/> </label>
+            <span style="color: red" th:text="${realName}"></span>
         </div>
         <div>
             <label class="notTitle"> Surname : <input type="text" th:field="*{surname}"/> </label>
