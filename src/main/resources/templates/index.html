@@ -103,6 +103,35 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <br>
+            <div th:each="product: ${list}" class="prodCart">
+                <span class="titleSpan" style="text-decoration : underline" th:text="${product.getType()}"></span>
+                <br>
+                <span class="titleSpan">Название товара : </span>
+                <span class="titleSpan" th:text="${product.getName()}"></span>
+                <br>
+                <img th:src="@{'/imgs/'+${product.getImageUrl()}}" style="height : 20%; width : 20%">
+                <br>
+                <span class="titleSpan">Описание товара : </span>
+                <br>
+                <span class="notTitle" th:text="${product.getDescription()}"></span>
+                <br>
+                <span class="titleSpan">Количество товара на складе : </span>
+                <span th:text="${product.getNumber()}"></span>
+                <br>
+                <span class="titleSpan">Цена товара : </span>
+                <span class="notTitle" th:text="${product.getPrice()}"></span>
+                <div th:if="${product.getNumber()} > 0">
+                    <span class="notTitle">Есть в наличии</span><br>
+                    <form th:method="post" th:action="@{/addToCart/{id} (id = ${product.getId()})}">
+                        <input class="btn" type="submit" value="Добавить в корзину">
+                    </form>
+                </div>
+                <div th:if="${product.getNumber()} == 0">
+                    <span class="notTitle">Нет в наличии</span><br>
+                </div>
+            </div>
         </div>
     </main>
     <footer>

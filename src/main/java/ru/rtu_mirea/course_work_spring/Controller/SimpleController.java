@@ -68,7 +68,7 @@ public class SimpleController {
                 model.addAttribute(entry.getKey(), entry.getValue());
             }
         } else {
-            model.addAttribute("list", productRepo.findAllByType(ProductType.PROCESSOR));
+            model.addAttribute("list", productRepo.findAll());
         }
         ProductType[] productType = ProductType.values();
         model.addAttribute("types", productType);
