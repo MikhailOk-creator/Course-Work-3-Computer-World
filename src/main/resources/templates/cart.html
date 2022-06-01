@@ -86,7 +86,7 @@
             <span class="titleSpan" style="text-decoration : underline" th:text="${product.getType()}"></span>
             <br>
             <span class="titleSpan">Название товара : </span>
-            <span class="titleSpan" th:text="${product.getTitle()}"></span>
+            <span class="titleSpan" th:text="${product.getName()}"></span>
             <br>
             <img th:src="@{'/images/'+${product.getImageUrl()}}" style="height : 200px; width : 200px">
             <br>
