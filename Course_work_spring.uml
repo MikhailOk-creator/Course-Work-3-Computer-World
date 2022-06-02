@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/mikha/Documents/МИРЭА/Шаблоны программных платформ языка Java/Курсач/Курсач/Course_work_spring</OriginalElement>
+  <nodes>
+    <node x="-166.5214872695314" y="411.48913715112667">ru.rtu_mirea.course_work_spring.CourseWorkSpringApplicationTests</node>
+    <node x="865.224561092268" y="959.5892230104455">ru.rtu_mirea.course_work_spring.Service.UserService</node>
+    <node x="1961.8261339546343" y="78.1746545827796">ru.rtu_mirea.course_work_spring.Controller.NavController</node>
+    <node x="1802.3270127475537" y="1370.5912783946972">ru.rtu_mirea.course_work_spring.Model.PdfFile</node>
+    <node x="2525.827295002306" y="1324.84926773307">ru.rtu_mirea.course_work_spring.Repository.OrderRepo</node>
+    <node x="1287.2580950493073" y="822.9999326629892">ru.rtu_mirea.course_work_spring.Repository.UserRepo</node>
+    <node x="545.0866058820858" y="524.7691092923098">ru.rtu_mirea.course_work_spring.Controller.ShutdownController</node>
+    <node x="2111.9119272213056" y="464.6796626397599">ru.rtu_mirea.course_work_spring.Service.UserDetService</node>
+    <node x="1188.4144371561763" y="486.44965278376617">ru.rtu_mirea.course_work_spring.Service.AdminService</node>
+    <node x="2880.045450373885" y="746.9478238707836">ru.rtu_mirea.course_work_spring.Service.OrderService</node>
+    <node x="1560.9925175236974" y="1287.7888994672703">build</node>
+    <node x="231.83826620880046" y="-20.80677359144363">ru.rtu_mirea.course_work_spring.Controller.UserController</node>
+    <node x="179.2264408869147" y="332.2064450856958">ru.rtu_mirea.course_work_spring.Config.WebSecurityConfig</node>
+    <node x="2750.56358838464" y="1017.3650770356987">ru.rtu_mirea.course_work_spring.Model.Order</node>
+    <node x="1775.7605799078044" y="546.2305531502162">ru.rtu_mirea.course_work_spring.Repository.ProductRepo</node>
+    <node x="1530.6171976198189" y="1024.327192047178">settings</node>
+    <node x="2380.3415617733417" y="259.8235568438539">ru.rtu_mirea.course_work_spring.Controller.OrderController</node>
+    <node x="1656.7784459327518" y="385.13818816213126">ru.rtu_mirea.course_work_spring.Controller.LoginController</node>
+    <node x="923.2945597359555" y="784.7212734935255">ru.rtu_mirea.course_work_spring.Model.ProductType</node>
+    <node x="1656.8123369118146" y="737.6462407559718">ru.rtu_mirea.course_work_spring.Controller.Pr5Controller</node>
+    <node x="2131.248318688508" y="1494.6160003676482">ru.rtu_mirea.course_work_spring.Model.Role</node>
+    <node x="2841.9563640519123" y="432.9576686257714">ru.rtu_mirea.course_work_spring.Controller.WorkerController</node>
+    <node x="2028.897036358514" y="1202.3874153877525">ru.rtu_mirea.course_work_spring.Service.CartService</node>
+    <node x="2347.6174092221813" y="1531.366326292205">ru.rtu_mirea.course_work_spring.Model.Product</node>
+    <node x="1755.8384913734558" y="1143.4118102958666">ru.rtu_mirea.course_work_spring.Service.MailService</node>
+    <node x="2148.278027924294" y="641.7279692632125">ru.rtu_mirea.course_work_spring.DTO.CartProduct</node>
+    <node x="536.633522953969" y="161.75309612055452">ru.rtu_mirea.course_work_spring.Controller.AdminController</node>
+    <node x="1755.8753742028891" y="1010.5324500776917">ru.rtu_mirea.course_work_spring.Repository.PdfFileRepo</node>
+    <node x="988.3489217036981" y="237.95989968878854">ru.rtu_mirea.course_work_spring.Controller.SimpleController</node>
+    <node x="2433.561448682226" y="593.414556989014">ru.rtu_mirea.course_work_spring.Controller.CartController</node>
+    <node x="869.7063742331793" y="519.9358346893556">ru.rtu_mirea.course_work_spring.Service.WorkerService</node>
+    <node x="1873.5601198172603" y="1678.8316132321158">ru.rtu_mirea.course_work_spring.Model.User</node>
+    <node x="2495.461352447046" y="1042.1352206131144">ru.rtu_mirea.course_work_spring.Model.OrderStatus</node>
+    <node x="-148.08530372511194" y="272.3276678777139">ru.rtu_mirea.course_work_spring.CourseWorkSpringApplication</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ru.rtu_mirea.course_work_spring.Controller.SimpleController" target="ru.rtu_mirea.course_work_spring.Service.UserService" relationship="TO_ONE">
+      <point x="7.829630180822278E-5" y="-93.99989968878853" />
+      <point x="1187.349" y="14.0" />
+      <point x="1699.5" y="14.0" />
+      <point x="1699.5" y="-38.307" />
+      <point x="161.726" y="-38.307" />
+      <point x="161.726" y="1053.589" />
+      <point x="-183.99956109226798" y="-2.2301044543837634E-4" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Model.User" target="ru.rtu_mirea.course_work_spring.Model.Order" relationship="TO_MANY">
+      <point x="166.99988018273962" y="3.867678842652822E-4" />
+      <point x="2760.117" y="2071.8320000000003" />
+      <point x="2760.117" y="1502.0" />
+      <point x="2839.064" y="1502.0" />
+      <point x="4.116153600079997E-4" y="226.99992296430128" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Controller.OrderController" target="ru.rtu_mirea.course_work_spring.Service.UserService" relationship="TO_ONE">
+      <point x="4.3822665838888497E-4" y="-71.9995568438539" />
+      <point x="2573.842" y="14.0" />
+      <point x="1699.5" y="14.0" />
+      <point x="1699.5" y="-38.307" />
+      <point x="161.726" y="-38.307" />
+      <point x="161.726" y="1053.589" />
+      <point x="-183.99956109226798" y="-2.2301044543837634E-4" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Service.UserService" target="ru.rtu_mirea.course_work_spring.Service.UserDetService" relationship="TO_ONE">
+      <point x="4.389077319046919E-4" y="93.99977698955445" />
+      <point x="1049.225" y="1171.0" />
+      <point x="1697.117" y="1171.0" />
+      <point x="1697.117" y="1097.032" />
+      <point x="2115.778" y="1097.032" />
+      <point x="-126.63392722130584" y="39.00033736024011" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.DTO.CartProduct" target="ru.rtu_mirea.course_work_spring.Model.ProductType" relationship="TO_MANY">
+      <point x="-93.00002792429405" y="220.30403073678747" />
+      <point x="2002.375" y="1112.032" />
+      <point x="2002.375" y="1649.0" />
+      <point x="1513.117" y="1649.0" />
+      <point x="1513.117" y="790.5" />
+      <point x="100.00044026404453" y="-44.22127349352547" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Controller.CartController" target="ru.rtu_mirea.course_work_spring.Service.CartService" relationship="TO_ONE">
+      <point x="-4.486822258513712E-4" y="-60.99955698901408" />
+      <point x="2626.561" y="569.0" />
+      <point x="2351.778" y="569.0" />
+      <point x="108.88096364148578" y="-116.00041538775258" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Model.User" target="ru.rtu_mirea.course_work_spring.Model.Role" relationship="TO_MANY">
+      <point x="159.5" y="-393.0" />
+      <point x="-9.18819887124755" y="62.0" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Service.OrderService" target="ru.rtu_mirea.course_work_spring.Repository.OrderRepo" relationship="TO_ONE">
+      <point x="14.999549626114913" y="-104.99982387078364" />
+      <point x="3083.545" y="732.0" />
+      <point x="2733.064" y="732.0" />
+      <point x="2733.064" y="1339.349" />
+      <point x="61.49970499769415" y="-2.67733070131726E-4" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Config.WebSecurityConfig" target="ru.rtu_mirea.course_work_spring.Service.UserDetService" relationship="TO_ONE">
+      <point x="-4.408869147027872E-4" y="60.99955491430421" />
+      <point x="327.726" y="1171.0" />
+      <point x="1697.117" y="1171.0" />
+      <point x="1697.117" y="1097.032" />
+      <point x="2115.778" y="1097.032" />
+      <point x="-126.63392722130584" y="39.00033736024011" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Controller.SimpleController" target="ru.rtu_mirea.course_work_spring.Repository.ProductRepo" relationship="TO_ONE">
+      <point x="199.0000782963018" y="1.003112114403848E-4" />
+      <point x="1627.0" y="331.96" />
+      <point x="1627.0" y="584.231" />
+      <point x="-137.99957990780445" y="4.468497837706309E-4" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Service.OrderService" target="ru.rtu_mirea.course_work_spring.Service.MailService" relationship="TO_ONE">
+      <point x="14.999549626114913" y="105.00017612921636" />
+      <point x="3083.545" y="2497.332" />
+      <point x="1426.0" y="2497.332" />
+      <point x="1426.0" y="1244.0" />
+      <point x="1862.338" y="1244.0" />
+      <point x="-4.913734558158467E-4" y="39.00018970413339" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Service.OrderService" target="ru.rtu_mirea.course_work_spring.Repository.ProductRepo" relationship="TO_ONE">
+      <point x="-4.5037388508717413E-4" y="105.00017612921636" />
+      <point x="3068.545" y="2482.332" />
+      <point x="1482.758" y="2482.332" />
+      <point x="1482.758" y="967.089" />
+      <point x="1627.0" y="967.089" />
+      <point x="1627.0" y="584.231" />
+      <point x="-137.99957990780445" y="4.468497837706309E-4" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Service.CartService" target="ru.rtu_mirea.course_work_spring.Repository.ProductRepo" relationship="TO_ONE">
+      <point x="-189.58503635851412" y="-116.00041538775258" />
+      <point x="2053.312" y="965.146" />
+      <point x="1627.0" y="965.146" />
+      <point x="1627.0" y="584.231" />
+      <point x="-137.99957990780445" y="4.468497837706309E-4" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Service.WorkerService" target="ru.rtu_mirea.course_work_spring.Service.MailService" relationship="TO_ONE">
+      <point x="-129.0003742331793" y="1.653106444337027E-4" />
+      <point x="847.725" y="569.936" />
+      <point x="847.725" y="1244.0" />
+      <point x="1862.338" y="1244.0" />
+      <point x="-4.913734558158467E-4" y="39.00018970413339" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Service.AdminService" target="ru.rtu_mirea.course_work_spring.Repository.UserRepo" relationship="TO_ONE">
+      <point x="-4.3715617630368797E-4" y="138.00034721623388" />
+      <point x="1392.414" y="805.5" />
+      <point x="1261.0" y="805.5" />
+      <point x="1261.0" y="861.0" />
+      <point x="-101.50009504930722" y="6.733701081884647E-5" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Controller.Pr5Controller" target="ru.rtu_mirea.course_work_spring.Repository.PdfFileRepo" relationship="TO_ONE">
+      <point x="11.56303729107458" y="105.0" />
+      <point x="0.0" y="-27.0" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Controller.AdminController" target="ru.rtu_mirea.course_work_spring.Service.AdminService" relationship="TO_ONE">
+      <point x="195.5" y="132.70680356823402" />
+      <point x="1378.8489217036981" y="443.45989968878854" />
+      <point x="-13.565515452478166" y="-138.0" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Controller.SimpleController" target="ru.rtu_mirea.course_work_spring.Service.CartService" relationship="TO_ONE">
+      <point x="199.0000782963018" y="-14.99989968878856" />
+      <point x="1889.278" y="316.96" />
+      <point x="1889.278" y="440.458" />
+      <point x="2677.5" y="440.458" />
+      <point x="2677.5" y="569.0" />
+      <point x="2351.778" y="569.0" />
+      <point x="108.88096364148578" y="-116.00041538775258" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Model.Order" target="ru.rtu_mirea.course_work_spring.Model.Product" relationship="TO_MANY">
+      <point x="-88.5" y="0.0" />
+      <point x="2508.327295002306" y="1244.3650770356987" />
+      <point x="-36.79011421987525" y="-217.0" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Controller.UserController" target="ru.rtu_mirea.course_work_spring.Service.UserService" relationship="TO_ONE">
+      <point x="191.9997337911995" y="-2.26408556370572E-4" />
+      <point x="1187.349" y="40.193" />
+      <point x="1187.349" y="14.0" />
+      <point x="1699.5" y="14.0" />
+      <point x="1699.5" y="-38.307" />
+      <point x="161.726" y="-38.307" />
+      <point x="161.726" y="1053.589" />
+      <point x="-183.99956109226798" y="-2.2301044543837634E-4" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Service.WorkerService" target="ru.rtu_mirea.course_work_spring.Repository.OrderRepo" relationship="TO_ONE">
+      <point x="-27.857374233179257" y="-49.99983468935562" />
+      <point x="970.849" y="-53.307" />
+      <point x="3085.456" y="-53.307" />
+      <point x="3085.456" y="732.0" />
+      <point x="2733.064" y="732.0" />
+      <point x="2733.064" y="1339.349" />
+      <point x="61.49970499769415" y="-2.67733070131726E-4" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Model.Order" target="ru.rtu_mirea.course_work_spring.Model.OrderStatus" relationship="TO_MANY">
+      <point x="-88.5" y="-152.22985642258436" />
+      <point x="97.5" y="0.0" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Service.OrderService" target="ru.rtu_mirea.course_work_spring.Service.CartService" relationship="TO_ONE">
+      <point x="-4.5037388508717413E-4" y="-104.99982387078364" />
+      <point x="3068.545" y="569.0" />
+      <point x="2351.778" y="569.0" />
+      <point x="108.88096364148578" y="-116.00041538775258" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Controller.OrderController" target="ru.rtu_mirea.course_work_spring.Service.OrderService" relationship="TO_ONE">
+      <point x="193.5" y="0.0" />
+      <point x="3100.456" y="331.8235568438539" />
+      <point x="31.91054962611497" y="-105.0" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Controller.WorkerController" target="ru.rtu_mirea.course_work_spring.Service.WorkerService" relationship="TO_ONE">
+      <point x="113.0" y="0.0" />
+      <point x="3115.456" y="482.9576686257714" />
+      <point x="3115.456" y="-68.307" />
+      <point x="955.849" y="-68.307" />
+      <point x="-42.85737423317926" y="-50.0" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Service.AdminService" target="ru.rtu_mirea.course_work_spring.Repository.ProductRepo" relationship="TO_ONE">
+      <point x="203.9995628438237" y="3.472162338766793E-4" />
+      <point x="1627.0" y="624.45" />
+      <point x="1627.0" y="584.231" />
+      <point x="-137.99957990780445" y="4.468497837706309E-4" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Model.Product" target="ru.rtu_mirea.course_work_spring.Model.ProductType" relationship="TO_MANY">
+      <point x="-197.50040922218113" y="-3.2629220504531986E-4" />
+      <point x="2225.06" y="1748.366" />
+      <point x="2225.06" y="1649.0" />
+      <point x="1513.117" y="1649.0" />
+      <point x="1513.117" y="790.5" />
+      <point x="100.00044026404453" y="-44.22127349352547" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Service.UserDetService" target="ru.rtu_mirea.course_work_spring.Repository.UserRepo" relationship="TO_ONE">
+      <point x="-111.63392722130584" y="39.00033736024011" />
+      <point x="2130.778" y="982.089" />
+      <point x="1261.0" y="982.089" />
+      <point x="1261.0" y="861.0" />
+      <point x="-101.50009504930722" y="6.733701081884647E-5" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Service.UserService" target="ru.rtu_mirea.course_work_spring.Repository.UserRepo" relationship="TO_ONE">
+      <point x="184.0004389077319" y="-2.2301044543837634E-4" />
+      <point x="1261.0" y="1053.589" />
+      <point x="1261.0" y="861.0" />
+      <point x="-101.50009504930722" y="6.733701081884647E-5" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Model.Order" target="ru.rtu_mirea.course_work_spring.Model.User" relationship="TO_ONE">
+      <point x="15.000411615360008" y="227.0" />
+      <point x="2854.064" y="2086.8320000000003" />
+      <point x="167.0" y="15.000386767884265" />
+    </edge>
+    <edge source="ru.rtu_mirea.course_work_spring.Model.Product" target="ru.rtu_mirea.course_work_spring.Model.Order" relationship="TO_ONE">
+      <point x="-4.0922218113337294E-4" y="-217.00032629220505" />
+      <point x="2545.117" y="1502.0" />
+      <point x="2839.064" y="1502.0" />
+      <point x="4.116153600079997E-4" y="226.99992296430128" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.3390027058368767" showDependencies="true" x="1555.5" y="1224.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
