@@ -1,5 +1,6 @@
 package ru.rtu_mirea.course_work_spring.Service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -26,6 +27,9 @@ public class UserService {
     /** Cryptographic class for encrypting/decrypting user passwords. **/
     private final BCryptPasswordEncoder encoder;
     private final UserDetService details;
+
+    @Autowired
+    private MailService mail;
 
     public UserService(UserRepo repository, BCryptPasswordEncoder encoder, UserDetailsService detailsService, UserDetService details) {
         this.repository = repository;
@@ -66,6 +70,9 @@ public class UserService {
         user.setPassword(encode(user.getPassword()));
         user.setActive(true);
         repository.save(user);
+
+        mail.send("mikhail.okhapkin@yandex.ru", "Spring Boot Course Work Info",
+                "Added user " + user.getName());
 
         return "redirect:/login";
     }

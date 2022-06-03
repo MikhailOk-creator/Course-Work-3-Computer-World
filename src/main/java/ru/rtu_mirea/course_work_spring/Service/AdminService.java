@@ -1,6 +1,7 @@
 package ru.rtu_mirea.course_work_spring.Service;
 
 import org.apache.commons.io.FileUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,9 @@ public class AdminService {
     private final ProductRepo repository;
     private final UserRepo userRepo;
     private final BCryptPasswordEncoder encoder;
+
+    @Autowired
+    private MailService mail;
 
     public AdminService(ProductRepo repository, UserRepo userRepo, BCryptPasswordEncoder encoder) {
         this.repository = repository;
@@ -88,6 +92,9 @@ public class AdminService {
 
         if (!flagOfErrors)
             repository.save(product);
+
+        mail.send("mikhail.okhapkin@yandex.ru", "Spring Boot Course Work Info",
+                "Added new product " + product.getType() + " " + product.getName());
 
         return "redirect:/admin";
     }
@@ -180,6 +187,10 @@ public class AdminService {
             user.setPassword(encoder.encode(user.getPassword()));
             userRepo.save(user);
         }
+
+        mail.send("mikhail.okhapkin@yandex.ru", "Spring Boot Course Work Info",
+                "Added worker " + user.getName());
+
         return "redirect:/admin";
     }
 
