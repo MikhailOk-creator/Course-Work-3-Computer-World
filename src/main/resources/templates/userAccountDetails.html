@@ -84,12 +84,12 @@
     <span style="color: green" th:text="${inputInfoMessage}"></span>
     <label class="titleSpan">
         Login :
-        <p th:text="${name}"></p>
+        <p th:text="${Login}"></p>
     </label>
 
-    <label class="titleSpan"  th:if="${realName} != ''">
+    <label class="titleSpan"  th:if="${name} != ''">
         Имя :
-        <p th:text="${realName}"></p>
+        <p th:text="${name}"></p>
     </label>
 
     <label class="titleSpan" th:if="${surname} != ''">
@@ -109,7 +109,7 @@
     <form th:action="@{/user/updateUser}" method="post">
         <div>
             <span class="notTitle">Имя</span>
-            <input type="text" name="realName" th:value="${currentRealName}">
+            <input type="text" name="name" th:value="${currentRealName}">
             <span style="color: red" th:text="${realNameErr}"></span>
         </div>
         <div>

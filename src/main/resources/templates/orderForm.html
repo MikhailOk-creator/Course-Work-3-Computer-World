@@ -94,19 +94,19 @@
     </div>
     <form th:action="@{/order}" method="post" th:object="${order}">
         <div>
-            <label class="notTitle"> Name : <input type="text" th:field="*{realName}"/> </label>
+            <label class="notTitle"> Name : <input type="text" th:field="*{user_name}"/> </label>
             <span style="color: red" th:text="${realName}"></span>
         </div>
         <div>
-            <label class="notTitle"> Surname : <input type="text" th:field="*{surname}"/> </label>
+            <label class="notTitle"> Surname : <input type="text" th:field="*{user_surname}"/> </label>
             <span style="color: red" th:text="${surname}"></span>
         </div>
         <div>
-            <label class="notTitle"> Address: <input type="text" th:field="*{address}"/> </label>
+            <label class="notTitle"> Address: <input type="text" th:field="*{user_address}"/> </label>
             <span style="color: red" th:text="${address}"></span>
         </div>
         <div>
-            <label class="notTitle"> Email: <input type="email" th:field="*{email}"/> </label>
+            <label class="notTitle"> Email: <input type="email" th:field="*{user_email}"/> </label>
             <span style="color: red" th:text="${email}"></span>
         </div>
         <div>

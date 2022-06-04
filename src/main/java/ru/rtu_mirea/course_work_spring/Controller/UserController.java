@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.support.RequestContextUtils;
 import ru.rtu_mirea.course_work_spring.Model.User;
+import ru.rtu_mirea.course_work_spring.Service.MailService;
 import ru.rtu_mirea.course_work_spring.Service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +20,7 @@ import java.util.Map;
 @RequestMapping("/user")
 public class UserController {
     private final UserService service;
+    private MailService mail;
 
     public UserController(UserService service) {
         this.service = service;
@@ -48,7 +50,7 @@ public class UserController {
     @PostMapping("/updateUser")
     public String updateUser(@ModelAttribute("phone") String phone,
                              @ModelAttribute("address") String address,
-                             @ModelAttribute("Name") String name,
+                             @ModelAttribute("name") String name,
                              @ModelAttribute("surname") String surname,
                              RedirectAttributes redirectAttributes) {
         boolean falseFlag = false;
@@ -84,7 +86,7 @@ public class UserController {
 
         user.setAddress(address);
         user.setPhone(phone);
-        user.setName(name);
+        user.setRealName(name);
         user.setSurname(surname);
 
         service.saveOrUpdate(user);
@@ -125,6 +127,9 @@ public class UserController {
 
         user.setPassword(service.encode(passwordFirstTry));
         service.saveOrUpdate(user);
+
+        mail.send(user.getEmail(), "Changing the password", "Your password has been changed in the 'Computer World' store system");
+
         return "redirect:/login";
     }
 }

@@ -41,12 +41,12 @@ public class OrderController {
         if(user != null){
             if(user.getPhone() == null ||
                     user.getAddress() == null ||
-                    user.getName() == null ||
+                    user.getRealName() == null ||
                     user.getSurname() == null) {
                 attributes.addFlashAttribute("inputInfoMessage", "Введите ваши личные данные для дальнейшей обработки заказа");
                 return "redirect:/user/userAccount";
             }
-            order.setUser_name(user.getName());
+            order.setUser_name(user.getRealName());
             order.setUser_surname(user.getSurname());
             order.setUser_address(user.getAddress());
             order.setUser_email(user.getEmail());
