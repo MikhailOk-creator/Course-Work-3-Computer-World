@@ -137,7 +137,7 @@ public class AdminService {
         String imageUrl = uploadPath + "/" + repository.findById(id).get().getImageUrl();
         repository.deleteById(id);
 
-        //FileUtils.deleteQuietly(new File(imageUrl));
+        FileUtils.deleteQuietly(new File(imageUrl));
         return "redirect:/admin";
     }
 
